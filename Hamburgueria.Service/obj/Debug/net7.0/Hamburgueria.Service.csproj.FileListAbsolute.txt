@@ -1,0 +1,12 @@
+C:\Projetos\Hamburgueron & Onicham\Hamburgueria.Service\bin\Debug\net7.0\Hamburgueria.Service.deps.json
+C:\Projetos\Hamburgueron & Onicham\Hamburgueria.Service\bin\Debug\net7.0\Hamburgueria.Service.dll
+C:\Projetos\Hamburgueron & Onicham\Hamburgueria.Service\bin\Debug\net7.0\Hamburgueria.Service.pdb
+C:\Projetos\Hamburgueron & Onicham\Hamburgueria.Service\obj\Debug\net7.0\Hamburgueria.Service.csproj.AssemblyReference.cache
+C:\Projetos\Hamburgueron & Onicham\Hamburgueria.Service\obj\Debug\net7.0\Hamburgueria.Service.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projetos\Hamburgueron & Onicham\Hamburgueria.Service\obj\Debug\net7.0\Hamburgueria.Service.AssemblyInfoInputs.cache
+C:\Projetos\Hamburgueron & Onicham\Hamburgueria.Service\obj\Debug\net7.0\Hamburgueria.Service.AssemblyInfo.cs
+C:\Projetos\Hamburgueron & Onicham\Hamburgueria.Service\obj\Debug\net7.0\Hamburgueria.Service.csproj.CoreCompileInputs.cache
+C:\Projetos\Hamburgueron & Onicham\Hamburgueria.Service\obj\Debug\net7.0\Hamburgueria.Service.dll
+C:\Projetos\Hamburgueron & Onicham\Hamburgueria.Service\obj\Debug\net7.0\refint\Hamburgueria.Service.dll
+C:\Projetos\Hamburgueron & Onicham\Hamburgueria.Service\obj\Debug\net7.0\Hamburgueria.Service.pdb
+C:\Projetos\Hamburgueron & Onicham\Hamburgueria.Service\obj\Debug\net7.0\ref\Hamburgueria.Service.dll

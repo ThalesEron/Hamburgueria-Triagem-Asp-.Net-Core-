@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "Hamburgueria.DATA/1.0.0": {
+        "runtime": {
+          "Hamburgueria.DATA.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Hamburgueria.DATA/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

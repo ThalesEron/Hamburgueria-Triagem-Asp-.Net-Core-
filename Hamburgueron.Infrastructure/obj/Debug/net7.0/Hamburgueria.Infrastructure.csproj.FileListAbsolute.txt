@@ -1,0 +1,12 @@
+C:\Projetos\Hamburgueron & Onicham\Hamburgueron.Infrastructure\bin\Debug\net7.0\Hamburgueria.Infrastructure.deps.json
+C:\Projetos\Hamburgueron & Onicham\Hamburgueron.Infrastructure\bin\Debug\net7.0\Hamburgueria.Infrastructure.dll
+C:\Projetos\Hamburgueron & Onicham\Hamburgueron.Infrastructure\bin\Debug\net7.0\Hamburgueria.Infrastructure.pdb
+C:\Projetos\Hamburgueron & Onicham\Hamburgueron.Infrastructure\obj\Debug\net7.0\Hamburgueria.Infrastructure.csproj.AssemblyReference.cache
+C:\Projetos\Hamburgueron & Onicham\Hamburgueron.Infrastructure\obj\Debug\net7.0\Hamburgueria.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projetos\Hamburgueron & Onicham\Hamburgueron.Infrastructure\obj\Debug\net7.0\Hamburgueria.Infrastructure.AssemblyInfoInputs.cache
+C:\Projetos\Hamburgueron & Onicham\Hamburgueron.Infrastructure\obj\Debug\net7.0\Hamburgueria.Infrastructure.AssemblyInfo.cs
+C:\Projetos\Hamburgueron & Onicham\Hamburgueron.Infrastructure\obj\Debug\net7.0\Hamburgueria.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Projetos\Hamburgueron & Onicham\Hamburgueron.Infrastructure\obj\Debug\net7.0\Hamburgueria.Infrastructure.dll
+C:\Projetos\Hamburgueron & Onicham\Hamburgueron.Infrastructure\obj\Debug\net7.0\refint\Hamburgueria.Infrastructure.dll
+C:\Projetos\Hamburgueron & Onicham\Hamburgueron.Infrastructure\obj\Debug\net7.0\Hamburgueria.Infrastructure.pdb
+C:\Projetos\Hamburgueron & Onicham\Hamburgueron.Infrastructure\obj\Debug\net7.0\ref\Hamburgueria.Infrastructure.dll

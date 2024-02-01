@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33717.318
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hamburgueria.WEB", "Hamburgueron & Onicham\Hamburgueria.WEB.csproj", "{E37605D7-DD38-4AB2-82A0-88BD91A91D2C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hamburgueria.DAO", "Teste\Hamburgueria.DAO.csproj", "{59B981A7-2D29-4379-A7EE-0708F3BE6944}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hamburgueria.Interfaces", "Hamburgueria.Interfaces\Hamburgueria.Interfaces.csproj", "{8948854B-A0E1-4CA5-9992-F200D8EF0B4E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hamburgueria.Repository", "Hamburgueria.Repository\Hamburgueria.Repository.csproj", "{C35DAE34-9E05-4A61-A804-CFB91A8F8582}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hamburgueria.Service", "Hamburgueria.Service\Hamburgueria.Service.csproj", "{94465036-FBA8-47D1-BA4C-B94BE39E1DBC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hamburgueria.Infrastructure", "Hamburgueron.Infrastructure\Hamburgueria.Infrastructure.csproj", "{B12A6B78-3D63-49EB-BA73-E33543A32F67}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hamburgueria.DATA", "Hamburgueria.DATA\Hamburgueria.DATA.csproj", "{8F7F02C9-23FD-4FC0-976E-80E0CCB1A2CF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E37605D7-DD38-4AB2-82A0-88BD91A91D2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E37605D7-DD38-4AB2-82A0-88BD91A91D2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E37605D7-DD38-4AB2-82A0-88BD91A91D2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E37605D7-DD38-4AB2-82A0-88BD91A91D2C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59B981A7-2D29-4379-A7EE-0708F3BE6944}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59B981A7-2D29-4379-A7EE-0708F3BE6944}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59B981A7-2D29-4379-A7EE-0708F3BE6944}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59B981A7-2D29-4379-A7EE-0708F3BE6944}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8948854B-A0E1-4CA5-9992-F200D8EF0B4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8948854B-A0E1-4CA5-9992-F200D8EF0B4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8948854B-A0E1-4CA5-9992-F200D8EF0B4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8948854B-A0E1-4CA5-9992-F200D8EF0B4E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C35DAE34-9E05-4A61-A804-CFB91A8F8582}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C35DAE34-9E05-4A61-A804-CFB91A8F8582}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C35DAE34-9E05-4A61-A804-CFB91A8F8582}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C35DAE34-9E05-4A61-A804-CFB91A8F8582}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94465036-FBA8-47D1-BA4C-B94BE39E1DBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94465036-FBA8-47D1-BA4C-B94BE39E1DBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94465036-FBA8-47D1-BA4C-B94BE39E1DBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94465036-FBA8-47D1-BA4C-B94BE39E1DBC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B12A6B78-3D63-49EB-BA73-E33543A32F67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B12A6B78-3D63-49EB-BA73-E33543A32F67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B12A6B78-3D63-49EB-BA73-E33543A32F67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B12A6B78-3D63-49EB-BA73-E33543A32F67}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F7F02C9-23FD-4FC0-976E-80E0CCB1A2CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F7F02C9-23FD-4FC0-976E-80E0CCB1A2CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F7F02C9-23FD-4FC0-976E-80E0CCB1A2CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F7F02C9-23FD-4FC0-976E-80E0CCB1A2CF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {889BBC31-7338-456A-AA65-FCD69098A0A1}
+	EndGlobalSection
+EndGlobal
