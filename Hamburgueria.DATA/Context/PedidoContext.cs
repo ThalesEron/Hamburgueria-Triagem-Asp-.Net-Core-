@@ -1,17 +1,15 @@
 ﻿using Hamburgueria.DATA.Models;
 using Microsoft.EntityFrameworkCore;
 
-
 namespace Hamburgueria.DATA.Context
 {
-    public class LoginContext : DbContext
+    public class PedidoContext : DbContext
     {
-        public DbSet<Login> Login { get; set; }
+        public DbSet<Pedido> Pedido { get; set; }
 
-        public LoginContext(DbContextOptions<LoginContext> options) :
+        public PedidoContext(DbContextOptions<PedidoContext> options) :
             base(options)
         {
         }
-
     }
 }

@@ -1,4 +1,5 @@
 using System.Diagnostics;
+using Hamburgueria.DATA.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace HamburgueriaTriagem.Controllers;
@@ -13,13 +14,12 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
-            return View();
-    }
-
-    public IActionResult Privacy()
-    {
+        
+      
         return View();
     }
+
+
 
 
 }

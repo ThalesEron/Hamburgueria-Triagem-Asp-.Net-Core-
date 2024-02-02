@@ -2,7 +2,32 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div id="login-container">
+    <h2>Login</h2>
+    <form id="login-form">
+        <label for="username">Usuário:</label>
+        <input style="margin-left : 70px" type="text" id="username" name="username" required>
+        <br/>
+        <br/>
+        <label for="mesa">Número Da Mesa:</label>
+        <input type="text" id="mesa" name="mesa" required>
+
+        <button type="button" onclick="validateLogin()">Entrar</button>
+    </form>
 </div>
+
+
+<script>
+    function validateLogin() {
+
+        var username = document.getElementById("username").value;
+        var mesa = document.getElementById("mesa").value;
+
+
+        if (username === "" || mesa === "") {
+            alert("Favor preencher os campos de Nome e Mesa.");
+        } else {
+            alert("Login bem-sucedido!");           
+        }
+    }
+</script>
