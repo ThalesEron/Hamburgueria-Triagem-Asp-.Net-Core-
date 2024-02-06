@@ -1,4 +1,5 @@
-﻿using Hamburgueria.DATA.Models;
+﻿using Hamburgueria.DATA.Interfaces;
+using Hamburgueria.DATA.Models;
 using Hamburgueria.DATA.Service;
 using Microsoft.AspNetCore.Mvc;
 
@@ -6,11 +7,12 @@ namespace HamburgueriaTriagem.Controllers
 {
     public class IngredienteController : Controller
     {
-        private readonly ILogger<IngredienteController> _logger;
+        private readonly IIngredienteRepository _ingredienteRepository;
 
-        public IngredienteController(ILogger<IngredienteController> logger)
+
+        public IngredienteController(IIngredienteRepository ingredienteRepository)
         {
-            _logger = logger;
+            _ingredienteRepository = ingredienteRepository;
         }
 
         public IActionResult Index()
@@ -32,7 +34,7 @@ namespace HamburgueriaTriagem.Controllers
                
             };
 
-            ingredienteService.CadastrarIngrediente(ingrediente);
+            _ingredienteRepository.CadastrarIngrediente(ingrediente);
 
 
             return "Cadastro de ingrediente realizado com sucesso.";

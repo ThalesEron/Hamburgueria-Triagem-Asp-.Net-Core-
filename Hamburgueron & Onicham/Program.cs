@@ -1,12 +1,16 @@
+using Hamburgueria.DATA.Interfaces;
+using Hamburgueria.DATA.Repository;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
 //INJECAO DE DEPENDENCIA
-//builder.Services.AddTransient<INTERFACE, REPOSITORY>();
+builder.Services.AddTransient<IIngredienteRepository, IngredienteRepository>();
 
 var app = builder.Build();
+AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
