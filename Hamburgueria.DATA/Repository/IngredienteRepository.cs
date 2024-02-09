@@ -1,6 +1,7 @@
 ﻿using Hamburgueria.DATA.Infrastructure;
 using Hamburgueria.DATA.Interfaces;
 using Hamburgueria.DATA.Models;
+using Hamburgueria.DATA.Models.DTO;
 
 namespace Hamburgueria.DATA.Repository
 {
@@ -8,23 +9,20 @@ namespace Hamburgueria.DATA.Repository
     {
         private readonly ConnectionContext _context = new();
 
-        public string CadastrarIngrediente(Ingrediente ingrediente)
+        public string CadastrarIngrediente(IngredienteDTO ingrediente)
         {
 
-            IngredienteDto newIngrediente = new()
-            {
-                ind_ativo = ingrediente.Ativo,
-                dat_cadastro = ingrediente.DataCadastro,
-                nom_ingrediente = ingrediente.NomeIngrediente
-            };
-
-            _context.Ingredientes.Add(newIngrediente);
+            _context.Ingredientes.Add(ingrediente);
             _context.SaveChanges();
 
             return string.Empty;
             //throw new NotImplementedException();
         }
 
+        public IList<IngredienteDTO> ListarIngredientes()
+        {
 
+            return _context.Ingredientes.ToList();
+        }
     }
 }

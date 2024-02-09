@@ -1,29 +1,30 @@
 ﻿using Hamburgueria.DATA.Interfaces;
-using Hamburgueria.DATA.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Hamburgueria.DATA.Interfaces.IServices;
+using Hamburgueria.DATA.Models.DTO;
 
 namespace Hamburgueria.DATA.Service
 {
-    public class IngredienteService
+    public class IngredienteService : IIngredienteService
     {
 
-        IIngredienteRepository repository;
+        private readonly IIngredienteRepository _ingredienteRepository;
 
+        public IngredienteService(IIngredienteRepository ingredienteRepository)
+        {
+            _ingredienteRepository = ingredienteRepository;
+        }
 
-
-        public string CadastrarIngrediente(Ingrediente ingrediente)
+        public string CadastrarIngrediente(IngredienteDTO ingrediente)
         {
 
-            repository.CadastrarIngrediente(ingrediente);
+            _ingredienteRepository.CadastrarIngrediente(ingrediente);
 
             return string.Empty;
         }
 
-
-
+        public IList<IngredienteDTO> ListarIngredientes()
+        {
+            return _ingredienteRepository.ListarIngredientes();
+        }
     }
 }

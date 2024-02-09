@@ -37,3 +37,4 @@ C:\Projetos\Hamburgueron & Onicham\Hamburgueron & Onicham\bin\Debug\net7.0\Hambu
 C:\Projetos\Hamburgueron & Onicham\Hamburgueron & Onicham\bin\Debug\net7.0\Hamburgueria.DATA.pdb
 C:\Projetos\Hamburgueron & Onicham\Hamburgueron & Onicham\obj\Debug\net7.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\Projetos\Hamburgueron & Onicham\Hamburgueron & Onicham\obj\Debug\net7.0\scopedcss\projectbundle\Hamburgueria.WEB.bundle.scp.css
+C:\Projetos\Hamburgueron & Onicham\Hamburgueron & Onicham\bin\Debug\net7.0\AutoMapper.dll

@@ -1,0 +1,49 @@
+﻿
+@{
+    ViewData["Title"] = "Ingrediente";
+}
+
+<div id="ingrediente-container">
+    <h2>Ingredientes Cadastrados</h2>
+    <form id="ingrediente-form">
+
+        @foreach(var ingrediente in @Model.IngredientesL)
+        {
+            <label>. @ingrediente.Nom_ingrediente - @ingrediente.Dat_cadastro</label>
+            <br />
+        }
+
+
+       
+@*
+        <button type="button" onclick="validateCadastroIngrediente()">Cadastrar</button>*@
+    </form>
+</div>
+
+
+
+
+
+
+
+<script>
+    function validateCadastroIngrediente() {
+
+        var nomeIngrediente = document.getElementById("nomeIngrediente").value;
+
+
+        if (nomeIngrediente === "") {
+            alert("Favor preencher o campo de nome de ingrediente.");
+        } else {
+            $.ajax({
+                url: 'https://localhost:7245/Ingrediente/CadastroIngrediente',
+                type: "POST",
+                data: { nomeIngrediente: nomeIngrediente },
+                beforeSend: function () {
+                },
+                success: function (data) {
+                },
+            });
+        }
+    }
+</script>

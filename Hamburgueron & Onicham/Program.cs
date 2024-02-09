@@ -1,13 +1,22 @@
+using Hamburgueria.DATA.Infrastructure.Mapping;
 using Hamburgueria.DATA.Interfaces;
+using Hamburgueria.DATA.Interfaces.IServices;
 using Hamburgueria.DATA.Repository;
+using Hamburgueria.DATA.Service;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-//INJECAO DE DEPENDENCIA
+//AutoMapper
+builder.Services.AddAutoMapper(typeof(DomainToDTOMapping));
+
+//INJECAO DE DEPENDENCIA REPOSITORY
 builder.Services.AddTransient<IIngredienteRepository, IngredienteRepository>();
+
+//INJECAO DE DEPENDENCIA SERVICE
+builder.Services.AddTransient<IIngredienteService, IngredienteService>();
 
 var app = builder.Build();
 AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);

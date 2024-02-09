@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "ODJzMLH4n5WK+NmamZvJtC9T8D/5zqBPwuSTD43HNWhl4jadSjPhYHdJJg/bXmy4mzV/PmaEIkYeRtzIYPmqLg==",
+  "dgSpecHash": "N2FF8baDcoPoSWK8ADH3s1RGdCLZFN8AhH/VDgBMSN6v4+8hCjJADjpClMmP8AMcOePnLbHoSOywOXJtbDaf0w==",
   "success": true,
   "projectFilePath": "C:\\Projetos\\Hamburgueron & Onicham\\Hamburgueria.DATA\\Hamburgueria.DATA.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\thale\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\thale\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.11\\microsoft.entityframeworkcore.7.0.11.nupkg.sha512",
     "C:\\Users\\thale\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\7.0.11\\microsoft.entityframeworkcore.abstractions.7.0.11.nupkg.sha512",
     "C:\\Users\\thale\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\7.0.11\\microsoft.entityframeworkcore.analyzers.7.0.11.nupkg.sha512",
