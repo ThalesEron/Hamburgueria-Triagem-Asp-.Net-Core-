@@ -1,13 +1,18 @@
+using Hamburgueria.DATA.Infrastructure;
 using Hamburgueria.DATA.Infrastructure.Mapping;
 using Hamburgueria.DATA.Interfaces;
 using Hamburgueria.DATA.Interfaces.IServices;
 using Hamburgueria.DATA.Repository;
 using Hamburgueria.DATA.Service;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+//builder.Services.AddDbContext<ConnectionContext>(options =>
+//options.UseNpgsql(builder.Configuration.GetConnectionString("ConnectionContext")));
 
 //AutoMapper
 builder.Services.AddAutoMapper(typeof(DomainToDTOMapping));

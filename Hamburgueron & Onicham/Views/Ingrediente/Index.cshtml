@@ -1,37 +1,47 @@
-﻿@{
-    ViewData["Title"] = "Ingrediente";
+﻿@model IEnumerable<Hamburgueria.DATA.Models.DTO.IngredienteDTO>
+
+@{
+    ViewData["Title"] = "Index";
 }
 
-<div id="ingrediente-container">
-    <h2>Ingredientes</h2>
-    <form id="ingrediente-form">
+<h1>Index</h1>
 
-        <label for="ingrediente">Nome do Ingrediente:</label>
-        <input type="text" id="nomeIngrediente" name="ingrediente" required>
-
-        <button type="button" onclick="validateCadastroIngrediente()">Cadastrar</button>
-    </form>
-</div>
-
-
-<script>
-    function validateCadastroIngrediente() {
-
-        var nomeIngrediente = document.getElementById("nomeIngrediente").value;
-
-
-        if (nomeIngrediente === "") {
-            alert("Favor preencher o campo de nome de ingrediente.");
-        } else {
-            $.ajax({
-                url: 'https://localhost:7245/Ingrediente/CadastroIngrediente',
-                type: "POST",
-                data: { nomeIngrediente: nomeIngrediente },
-                beforeSend: function () {
-                },
-                success: function (data) {
-                },
-            });
-        }
-    }
-</script>
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nom_ingrediente)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ind_ativo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Dat_cadastro)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+            @foreach (var item in Model) {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Nom_ingrediente)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Ind_ativo)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Dat_cadastro)
+                        </td>
+                        <td>
+                            <a asp-action="Edit" asp-route-id="@item.Id_ingrediente">Edit</a> |
+                            <a asp-action="Details" asp-route-id="@item.Id_ingrediente">Details</a> |
+                            <a asp-action="Delete" asp-route-id="@item.Id_ingrediente">Delete</a>
+                        </td>
+                    </tr>
+            }
+    </tbody>
+</table>
