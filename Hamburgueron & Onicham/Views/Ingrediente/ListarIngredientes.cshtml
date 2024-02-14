@@ -1,4 +1,6 @@
-﻿
+﻿@model Hamburgueria.DATA.ViewModel.ListarIngredientesViewModel
+
+
 @{
     ViewData["Title"] = "Ingrediente";
 }
@@ -7,15 +9,48 @@
     <h2>Ingredientes Cadastrados</h2>
     <form id="ingrediente-form">
 
-        @foreach(var ingrediente in @Model.IngredientesL)
-        {
-            <label>. @ingrediente.Nom_ingrediente - @ingrediente.Dat_cadastro</label>
-            <br />
-        }
+        <fieldset>
+            <legend>Ingredientes</legend>
+
+            <div id="ingredienteL" class="web-Grid">
+                <table id="tabelaIngredientes" class="display" style="width:100%">
+                    <thead>
+                        <tr>
+                            <th>@Html.DisplayNameFor(model => model.Ingrediente.NomeIngrediente)</th>
+                            <th>@Html.DisplayNameFor(model => model.Ingrediente.DataCadastro)</th>
+                            <th>@Html.DisplayName("")</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach(var ingrediente in Model.IngredientesL)
+                        {
+                            <tr>
+                                <td>@Html.DisplayFor(modelItem => ingrediente.Nom_ingrediente)</td>
+                                <td>@Html.DisplayFor(modelItem => ingrediente.Dat_cadastro)</td>
+                                <td> 
+                                    <a asp-controller="Ingrediente" class="btn btn-warning" asp-action="Index" asp-route-id="1">Editar</a>
+                                    <a asp-controller="Ingrediente" class="btn btn-danger" asp-action="Index" asp-route-id="1">Excluir</a>
+                                    
+                                </td>
+                               
+                            </tr>
+                        }
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th>@Html.DisplayNameFor(model => model.Ingrediente.NomeIngrediente)</th>
+                            <th>@Html.DisplayNameFor(model => model.Ingrediente.DataCadastro)</th>
+                            <th>@Html.DisplayName("")</th>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
 
 
-       
-@*
+        </fieldset>
+
+
+        @*
         <button type="button" onclick="validateCadastroIngrediente()">Cadastrar</button>*@
     </form>
 </div>
@@ -24,26 +59,16 @@
 
 
 
+@section Scripts{
 
+    <script>
+        new DataTable('#tabelaIngredientes', {
+            language: {
+                url: '//cdn.datatables.net/plug-ins/1.13.7/i18n/pt-BR.json',
+            },
+        });
 
-<script>
-    function validateCadastroIngrediente() {
+    </script>
+   
+}
 
-        var nomeIngrediente = document.getElementById("nomeIngrediente").value;
-
-
-        if (nomeIngrediente === "") {
-            alert("Favor preencher o campo de nome de ingrediente.");
-        } else {
-            $.ajax({
-                url: 'https://localhost:7245/Ingrediente/CadastroIngrediente',
-                type: "POST",
-                data: { nomeIngrediente: nomeIngrediente },
-                beforeSend: function () {
-                },
-                success: function (data) {
-                },
-            });
-        }
-    }
-</script>

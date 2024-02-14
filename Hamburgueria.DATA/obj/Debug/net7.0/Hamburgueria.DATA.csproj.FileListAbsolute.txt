@@ -10,3 +10,5 @@ C:\Projetos\Hamburgueron & Onicham\Hamburgueria.DATA\obj\Debug\net7.0\Hamburguer
 C:\Projetos\Hamburgueron & Onicham\Hamburgueria.DATA\obj\Debug\net7.0\refint\Hamburgueria.DATA.dll
 C:\Projetos\Hamburgueron & Onicham\Hamburgueria.DATA\obj\Debug\net7.0\Hamburgueria.DATA.pdb
 C:\Projetos\Hamburgueron & Onicham\Hamburgueria.DATA\obj\Debug\net7.0\ref\Hamburgueria.DATA.dll
+C:\Projetos\Hamburgueron & Onicham\Hamburgueria.DATA\bin\Debug\net7.0\Hamburgueria.DATA.runtimeconfig.json
+C:\Projetos\Hamburgueron & Onicham\Hamburgueria.DATA\obj\Debug\net7.0\Hamburgueria.DATA.genruntimeconfig.cache

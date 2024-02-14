@@ -14,7 +14,13 @@ namespace Hamburgueria.DATA.Infrastructure.Mapping
                 .ForMember(dest => dest.Id_ingrediente, m => m.MapFrom(origin => origin.Codigo))
                 .ForMember(dest => dest.Nom_ingrediente, m => m.MapFrom(origin => origin.NomeIngrediente));
 
-              
+            CreateMap<IngredienteDTO, Ingrediente>()
+                .ForMember(dest => dest.Ativo, m => m.MapFrom(origin => origin.Ind_ativo))
+                .ForMember(dest => dest.DataCadastro, m => m.MapFrom(origin => origin.Dat_cadastro))
+                .ForMember(dest => dest.Codigo, m => m.MapFrom(origin => origin.Id_ingrediente))
+                .ForMember(dest => dest.NomeIngrediente, m => m.MapFrom(origin => origin.Nom_ingrediente));
+
+
         } 
     }
 }

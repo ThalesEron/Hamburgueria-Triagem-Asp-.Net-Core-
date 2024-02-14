@@ -19,14 +19,15 @@ namespace HamburgueriaTriagem.Controllers
             _mapper = mapper;
         }
 
+
         public IActionResult Index()
         {
 
             return View();
         }
 
-        [HttpPost]
-        public string CadastroIngrediente(string nomeIngrediente)
+        [HttpPost]      
+        public IActionResult CadastroIngrediente(string nomeIngrediente)
         {
 
             Ingrediente ingrediente = new()
@@ -42,16 +43,17 @@ namespace HamburgueriaTriagem.Controllers
             _ingredienteService.CadastrarIngrediente(ingredienteDto);
 
 
-            return "Cadastro de ingrediente realizado com sucesso.";
+            return View();
         }
 
         [HttpGet]
         public IActionResult ListarIngredientes()
         {
 
-            var vm = new ListarIngredientesViewModel
+            ListarIngredientesViewModel vm = new()
             {
-                IngredientesL = _ingredienteService.ListarIngredientes()
+                IngredientesL = _ingredienteService.ListarIngredientes(),
+                Ingrediente = new Ingrediente()
             };
 
             return View(vm);
