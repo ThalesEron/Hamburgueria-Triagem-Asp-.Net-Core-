@@ -1,5 +1,6 @@
 ﻿using Hamburgueria.DATA.Interfaces;
 using Hamburgueria.DATA.Interfaces.IServices;
+using Hamburgueria.DATA.Models;
 using Hamburgueria.DATA.Models.DTO;
 
 namespace Hamburgueria.DATA.Service
@@ -14,7 +15,7 @@ namespace Hamburgueria.DATA.Service
             _ingredienteRepository = ingredienteRepository;
         }
 
-        public string CadastrarIngrediente(IngredienteDTO ingrediente)
+        public string CadastrarIngrediente(Ingrediente ingrediente)
         {
 
             _ingredienteRepository.CadastrarIngrediente(ingrediente);

@@ -9,7 +9,7 @@ namespace Hamburgueria.DATA.Repository
     {
         private readonly ConnectionContext _context = new();
 
-        public string CadastrarIngrediente(IngredienteDTO ingrediente)
+        public string CadastrarIngrediente(Ingrediente ingrediente)
         {
 
             _context.Ingredientes.Add(ingrediente);
@@ -22,7 +22,8 @@ namespace Hamburgueria.DATA.Repository
         public IList<IngredienteDTO> ListarIngredientes()
         {
 
-            return _context.Ingredientes.ToList();
+            //return _context.Ingredientes.ToList();
+            throw new NotImplementedException();
         }
     }
 }

@@ -8,12 +8,12 @@ namespace Hamburgueria.DATA.Infrastructure
     {
         //public DbSet<Login> Logins { get; set; }
         //public DbSet<Pedido> Pedidos { get; set; }
-        public DbSet<IngredienteDTO> Ingredientes { get; set; }
+        public DbSet<Ingrediente> Ingredientes { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseNpgsql(
-                "ConnectionContext");
+                "Server=localhost;Port=5432;Database=postgres;User Id=postgres;Password=1234");
         }
     }
 }

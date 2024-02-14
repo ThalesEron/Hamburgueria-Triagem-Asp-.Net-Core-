@@ -6,7 +6,7 @@ namespace Hamburgueria.DATA.Context
 {
     public class IngredienteContext : DbContext
     {
-        public DbSet<IngredienteDTO> Ingrediente { get; set; }
+        public DbSet<Ingrediente> Ingrediente { get; set; }
 
         public IngredienteContext(DbContextOptions<IngredienteContext> options) :
             base(options)

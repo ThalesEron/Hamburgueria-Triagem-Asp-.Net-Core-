@@ -5,7 +5,7 @@ namespace Hamburgueria.DATA.Interfaces
 {
     public interface IIngredienteRepository
     {
-        string CadastrarIngrediente(IngredienteDTO ingrediente);
+        string CadastrarIngrediente(Ingrediente ingrediente);
         IList<IngredienteDTO> ListarIngredientes();
 
     }

@@ -40,7 +40,7 @@ namespace HamburgueriaTriagem.Controllers
 
             var ingredienteDto = _mapper.Map<IngredienteDTO>(ingrediente);            
 
-            _ingredienteService.CadastrarIngrediente(ingredienteDto);
+            _ingredienteService.CadastrarIngrediente(ingrediente);
 
 
             return View();
