@@ -1,0 +1,54 @@
+﻿@model Hamburgueria.DATA.ViewModel.ListarIngredientesViewModel;
+
+@{
+    ViewData["Title"] = "Ingredientes Cadastrados";
+}
+
+<h1>Ingredientes Cadastrados</h1>
+<br />
+<p>
+    <a class="btn btn-primary" asp-action="Index">Novo Ingrediente</a>
+</p>
+<table id="tabelaIngredientes" class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Ingrediente.NomeIngrediente)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ingrediente.DataCadastro)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+            @foreach (var item in Model.IngredientesL) {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.NomeIngrediente)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DataCadastro)
+                        </td>
+                        <td>
+                            <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                            <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                        </td>
+                    </tr>
+            }
+    </tbody>
+</table>
+
+
+@section Scripts{
+
+    <script>
+        new DataTable('#tabelaIngredientes', {
+            language: {
+                url: '//cdn.datatables.net/plug-ins/1.13.7/i18n/pt-BR.json',
+            },
+        });
+
+    </script>
+
+}

@@ -1,47 +1,36 @@
-﻿@model IEnumerable<Hamburgueria.DATA.Models.DTO.IngredienteDTO>
+﻿@model Hamburgueria.DATA.Models.Ingrediente
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Cadastrar Ingrediente";
 }
 
-<h1>Index</h1>
+<h1>Cadastrar Ingrediente</h1>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Nom_ingrediente)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Ind_ativo)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Dat_cadastro)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-            @foreach (var item in Model) {
-                    <tr>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Nom_ingrediente)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Ind_ativo)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Dat_cadastro)
-                        </td>
-                        <td>
-                            <a asp-action="Edit" asp-route-id="@item.Id_ingrediente">Edit</a> |
-                            <a asp-action="Details" asp-route-id="@item.Id_ingrediente">Details</a> |
-                            <a asp-action="Delete" asp-route-id="@item.Id_ingrediente">Delete</a>
-                        </td>
-                    </tr>
-            }
-    </tbody>
-</table>
+<h4>Ingrediente</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="CadastroIngrediente">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-group">
+                <label asp-for="NomeIngrediente" class="control-label"></label>
+                <input asp-for="NomeIngrediente" class="form-control" />
+                <span asp-validation-for="NomeIngrediente" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <input type="submit" value="Cadastrar" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+<br />
+<br />
+<div>
+    <a class="btn btn-primary" asp-action="ListarIngredientes">Voltar para a lista.</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

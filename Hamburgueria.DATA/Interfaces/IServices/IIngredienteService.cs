@@ -1,11 +1,12 @@
-﻿using Hamburgueria.DATA.Models;
-using Hamburgueria.DATA.Models.DTO;
+﻿using Hamburgueria.DATA.DTO;
+using Hamburgueria.DATA.Models;
 
 namespace Hamburgueria.DATA.Interfaces.IServices
 {
     public interface IIngredienteService
     {
         string CadastrarIngrediente(Ingrediente ingrediente);
-        IList<IngredienteDTO> ListarIngredientes();
+        IList<Ingrediente> ListarIngredientes();
+        Ingrediente GetIngredienteByName(string nomeIngrediente);
     }
 }

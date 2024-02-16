@@ -1,7 +1,7 @@
-﻿using Hamburgueria.DATA.Infrastructure;
+﻿using Hamburgueria.DATA.DTO;
+using Hamburgueria.DATA.Infrastructure;
 using Hamburgueria.DATA.Interfaces;
 using Hamburgueria.DATA.Models;
-using Hamburgueria.DATA.Models.DTO;
 
 namespace Hamburgueria.DATA.Repository
 {
@@ -19,11 +19,16 @@ namespace Hamburgueria.DATA.Repository
             //throw new NotImplementedException();
         }
 
-        public IList<IngredienteDTO> ListarIngredientes()
+        public Ingrediente GetIngredienteByName(string nomeIngrediente)
         {
 
-            //return _context.Ingredientes.ToList();
-            throw new NotImplementedException();
+           return _context.Ingredientes.Where(a => a.NomeIngrediente.ToLower() == nomeIngrediente.ToLower()).ToList().FirstOrDefault();
+        }
+
+        public IList<Ingrediente> ListarIngredientes()
+        {
+
+            return _context.Ingredientes.ToList();
         }
     }
 }

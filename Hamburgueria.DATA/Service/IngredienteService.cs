@@ -1,7 +1,7 @@
-﻿using Hamburgueria.DATA.Interfaces;
+﻿using Hamburgueria.DATA.DTO;
+using Hamburgueria.DATA.Interfaces;
 using Hamburgueria.DATA.Interfaces.IServices;
 using Hamburgueria.DATA.Models;
-using Hamburgueria.DATA.Models.DTO;
 
 namespace Hamburgueria.DATA.Service
 {
@@ -23,7 +23,12 @@ namespace Hamburgueria.DATA.Service
             return string.Empty;
         }
 
-        public IList<IngredienteDTO> ListarIngredientes()
+        public Ingrediente GetIngredienteByName(string nomeIngrediente)
+        {
+            return _ingredienteRepository.GetIngredienteByName(nomeIngrediente);
+        }
+
+        public IList<Ingrediente> ListarIngredientes()
         {
             return _ingredienteRepository.ListarIngredientes();
         }

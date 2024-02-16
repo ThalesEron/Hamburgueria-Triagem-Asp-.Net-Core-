@@ -1,5 +1,4 @@
 ﻿using Hamburgueria.DATA.Models;
-using Hamburgueria.DATA.Models.DTO;
 using Microsoft.EntityFrameworkCore;
 
 namespace Hamburgueria.DATA.Context

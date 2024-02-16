@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
+using Hamburgueria.DATA.DTO;
 using Hamburgueria.DATA.Interfaces.IServices;
 using Hamburgueria.DATA.Models;
-using Hamburgueria.DATA.Models.DTO;
 using Hamburgueria.DATA.ViewModel;
 using Microsoft.AspNetCore.Mvc;
 
@@ -38,22 +38,29 @@ namespace HamburgueriaTriagem.Controllers
                
             };
 
-            var ingredienteDto = _mapper.Map<IngredienteDTO>(ingrediente);            
 
-            _ingredienteService.CadastrarIngrediente(ingrediente);
+            if(_ingredienteService.GetIngredienteByName(nomeIngrediente) is null)
+                _ingredienteService.CadastrarIngrediente(ingrediente);
+            else
+                return RedirectToAction("ListarIngredientes");
 
 
-            return View();
+
+            return RedirectToAction("ListarIngredientes");
         }
 
         [HttpGet]
         public IActionResult ListarIngredientes()
         {
 
+            var buscarIngredientes = _ingredienteService.ListarIngredientes();
+
+            var listaIngredientesDto = _mapper.Map<List<IngredienteDTO>>(buscarIngredientes);
+
             ListarIngredientesViewModel vm = new()
             {
-                IngredientesL = _ingredienteService.ListarIngredientes(),
-                Ingrediente = new Ingrediente()
+                IngredientesL = listaIngredientesDto,
+                Ingrediente = new IngredienteDTO()
             };
 
             return View(vm);
