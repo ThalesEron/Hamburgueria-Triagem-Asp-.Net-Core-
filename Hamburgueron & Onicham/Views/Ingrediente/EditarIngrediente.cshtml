@@ -1,0 +1,38 @@
+﻿@model Hamburgueria.DATA.ViewModel.ListarIngredientesViewModel;
+
+@{
+    ViewData["Title"] = "EditarIngrediente";
+}
+
+<h1>Editar Ingrediente</h1>
+
+<h4>Ingrediente</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="SaveEditarIngrediente">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Ingrediente.Id" />
+            <input type="hidden" asp-for="Ingrediente.Ativo" />
+            <input type="hidden" asp-for="Ingrediente.DataCadastro" />
+
+            <div class="form-group">
+                <label asp-for="Ingrediente.NomeIngrediente" class="control-label"></label>
+                <input asp-for="Ingrediente.NomeIngrediente" class="form-control" />
+                <span asp-validation-for="Ingrediente.NomeIngrediente" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <input class="btn btn-primary" type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+<br />
+<div>
+    <a class="btn btn-primary" asp-action="ListarIngredientes">Voltar</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

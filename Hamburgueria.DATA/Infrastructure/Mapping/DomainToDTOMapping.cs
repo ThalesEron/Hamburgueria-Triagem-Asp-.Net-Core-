@@ -8,7 +8,13 @@ namespace Hamburgueria.DATA.Infrastructure.Mapping
     {
         public DomainToDTOMapping() 
         {
-            CreateMap<Ingrediente, IngredienteDTO>();
+            CreateMap<Ingrediente, IngredienteDTO>()
+                .ForMember(a => a.Id,
+                    map => map.MapFrom(src => src.Codigo));
+
+            CreateMap<IngredienteDTO, Ingrediente>()
+               .ForMember(a => a.Codigo,
+                   map => map.MapFrom(src => src.Id));
 
 
         } 

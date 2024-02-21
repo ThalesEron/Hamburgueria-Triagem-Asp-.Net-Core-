@@ -11,5 +11,7 @@ namespace Hamburgueria.DATA.DTO
 
         [DisplayName("Data Cadastro")]
         public DateTime DataCadastro { get; set; }
+        [DisplayName("Ativo")]
+        public bool Ativo { get; set; }
     }
 }

@@ -66,6 +66,46 @@ namespace HamburgueriaTriagem.Controllers
             return View(vm);
         }
 
+        public IActionResult EditarIngrediente(int ingredienteId)
+        {
+
+            var ingrediente = _ingredienteService.GetIngredienteById(ingredienteId);
+
+            ListarIngredientesViewModel vm = new()
+            {
+                Ingrediente = new IngredienteDTO
+                {
+                    Id = ingredienteId,
+                    DataCadastro = ingrediente.DataCadastro,
+                    Ativo = ingrediente.Ativo
+                }
+            };
+
+            return View(vm);
+        }
+
+        public IActionResult SaveEditarIngrediente(IngredienteDTO ingrediente)
+        {
+
+            if(_ingredienteService.GetIngredienteByName(ingrediente.NomeIngrediente) is null)
+                _ingredienteService.EditarIngrediente(_mapper.Map<Ingrediente>(ingrediente));
+            else
+                return RedirectToAction("ListarIngredientes");
+
+
+            return RedirectToAction("ListarIngredientes");
+        }
+
+        public IActionResult DeletarIngrediente(int ingredienteId)
+        {
+            var ingrediente = _ingredienteService.GetIngredienteById(ingredienteId);
+
+            ingrediente.Ativo = false;
+
+            _ingredienteService.DeletarIngrediente(ingrediente);
+
+            return RedirectToAction("ListarIngredientes");
+        }
 
 
     }

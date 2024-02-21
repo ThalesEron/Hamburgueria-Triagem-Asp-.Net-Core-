@@ -15,12 +15,25 @@ namespace Hamburgueria.DATA.Service
             _ingredienteRepository = ingredienteRepository;
         }
 
-        public string CadastrarIngrediente(Ingrediente ingrediente)
+        public void CadastrarIngrediente(Ingrediente ingrediente)
         {
 
             _ingredienteRepository.CadastrarIngrediente(ingrediente);
+        }
 
-            return string.Empty;
+        public void DeletarIngrediente(Ingrediente ingrediente)
+        {
+            _ingredienteRepository.DeletarIngrediente(ingrediente);
+        }
+
+        public void EditarIngrediente(Ingrediente ingrediente)
+        {
+            _ingredienteRepository.EditarIngrediente(ingrediente);
+        }
+
+        public Ingrediente GetIngredienteById(int ingredienteId)
+        {
+            return _ingredienteRepository.GetIngredienteById(ingredienteId);
         }
 
         public Ingrediente GetIngredienteByName(string nomeIngrediente)
