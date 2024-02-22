@@ -392,3 +392,7 @@ FodyWeavers.xsd
 *.pidb
 *.svclog
 *.scc
+
+# Local History for Visual Studio
+.localhistory/
+/.editorconfig
