@@ -361,3 +361,5 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/.vs/Hamburgueria Triagem/v17/.suo
+/Hamburgueron & Onicham/obj/Debug/net7.0/Hamburgueria.WEB.csproj.AssemblyReference.cache
