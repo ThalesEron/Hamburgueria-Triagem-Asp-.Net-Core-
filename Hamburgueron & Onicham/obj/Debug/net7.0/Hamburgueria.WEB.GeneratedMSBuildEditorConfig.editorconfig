@@ -16,14 +16,6 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Projetos\Hamburgueron & Onicham\Hamburgueron & Onicham
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Projetos/Hamburgueron & Onicham/Hamburgueron & Onicham/Views/Backup/Ingrediente/CadastrarIngrediente.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFja3VwXEluZ3JlZGllbnRlXENhZGFzdHJhckluZ3JlZGllbnRlLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Projetos/Hamburgueron & Onicham/Hamburgueron & Onicham/Views/Backup/Ingrediente/ListarIngredientes.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFja3VwXEluZ3JlZGllbnRlXExpc3RhckluZ3JlZGllbnRlcy5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Projetos/Hamburgueron & Onicham/Hamburgueron & Onicham/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
