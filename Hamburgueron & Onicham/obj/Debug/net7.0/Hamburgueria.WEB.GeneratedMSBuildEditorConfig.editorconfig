@@ -18,7 +18,11 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = E:\C#\Projeto\Hamburgueria-Triagem\Hamburgueron & Onicham
 build_property._RazorSourceGeneratorDebug = 
 
+<<<<<<< HEAD
 [E:/C\#/Projeto/Hamburgueria-Triagem/Hamburgueron & Onicham/Views/Home/Index.cshtml]
+=======
+[C:/Projetos/Hamburgueron & Onicham/Hamburgueron & Onicham/Views/Home/Index.cshtml]
+>>>>>>> 54bfe714f0f48d71c3c8c60992a5c10a7ad61ea6
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 

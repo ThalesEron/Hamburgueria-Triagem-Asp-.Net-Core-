@@ -7,19 +7,19 @@ namespace Hamburgueria.DATA.Models;
 public class Ingrediente 
 {
     [Key]
-    [Column("Id")]
+    [Column("id")]
     [Required]
     public int Codigo { get; set; }
-    [Column("Ind_ativo")]
+    [Column("ind_ativo")]
     [Required]
     public bool Ativo { get; set; }
     [DisplayName("Data Cadastro")]
-    [Column("Dat_cadastro")]
+    [Column("dat_cadastro")]
     [Required]
     public DateTime DataCadastro { get; set; }
 
     [DisplayName("Nome Ingrediente")]
-    [Column("Nom_ingrediente")]
+    [Column("nom_ingrediente")]
     [DataType(DataType.Text)]
     [Required(ErrorMessage = "Nome do ingrediente obrigatório."), MaxLength(50)]
     public string NomeIngrediente { get; set; }
