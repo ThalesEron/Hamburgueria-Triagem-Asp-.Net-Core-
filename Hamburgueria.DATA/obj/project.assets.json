@@ -1060,19 +1060,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\User\\.nuget\\packages\\": {}
+    "C:\\Users\\thale\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\C#\\Projeto\\Hamburgueria-Triagem\\Hamburgueria.DATA\\Hamburgueria.DATA.csproj",
+      "projectUniqueName": "C:\\Projetos\\Hamburgueron & Onicham\\Hamburgueria.DATA\\Hamburgueria.DATA.csproj",
       "projectName": "Hamburgueria.DATA",
-      "projectPath": "E:\\C#\\Projeto\\Hamburgueria-Triagem\\Hamburgueria.DATA\\Hamburgueria.DATA.csproj",
-      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "E:\\C#\\Projeto\\Hamburgueria-Triagem\\Hamburgueria.DATA\\obj\\",
+      "projectPath": "C:\\Projetos\\Hamburgueron & Onicham\\Hamburgueria.DATA\\Hamburgueria.DATA.csproj",
+      "packagesPath": "C:\\Users\\thale\\.nuget\\packages\\",
+      "outputPath": "C:\\Projetos\\Hamburgueron & Onicham\\Hamburgueria.DATA\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\thale\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1134,26 +1134,12 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[7.0.15, 7.0.15]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[7.0.15, 7.0.15]"
-          },
-          {
-            "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[7.0.15, 7.0.15]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
       }
     }
   }

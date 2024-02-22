@@ -11410,19 +11410,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\User\\.nuget\\packages\\": {}
+    "C:\\Users\\thale\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\C#\\Projeto\\Hamburgueria-Triagem\\Hamburgueron & Onicham\\Hamburgueria.WEB.csproj",
+      "projectUniqueName": "C:\\Projetos\\Hamburgueron & Onicham\\Hamburgueron & Onicham\\Hamburgueria.WEB.csproj",
       "projectName": "Hamburgueria.WEB",
-      "projectPath": "E:\\C#\\Projeto\\Hamburgueria-Triagem\\Hamburgueron & Onicham\\Hamburgueria.WEB.csproj",
-      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "E:\\C#\\Projeto\\Hamburgueria-Triagem\\Hamburgueron & Onicham\\obj\\",
+      "projectPath": "C:\\Projetos\\Hamburgueron & Onicham\\Hamburgueron & Onicham\\Hamburgueria.WEB.csproj",
+      "packagesPath": "C:\\Users\\thale\\.nuget\\packages\\",
+      "outputPath": "C:\\Projetos\\Hamburgueron & Onicham\\Hamburgueron & Onicham\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\thale\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -11430,14 +11430,15 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\sdk\\7.0.306\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "E:\\C#\\Projeto\\Hamburgueria-Triagem\\Hamburgueria.DATA\\Hamburgueria.DATA.csproj": {
-              "projectPath": "E:\\C#\\Projeto\\Hamburgueria-Triagem\\Hamburgueria.DATA\\Hamburgueria.DATA.csproj"
+            "C:\\Projetos\\Hamburgueron & Onicham\\Hamburgueria.DATA\\Hamburgueria.DATA.csproj": {
+              "projectPath": "C:\\Projetos\\Hamburgueron & Onicham\\Hamburgueria.DATA\\Hamburgueria.DATA.csproj"
             }
           }
         }
@@ -11496,24 +11497,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[7.0.15, 7.0.15]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[7.0.15, 7.0.15]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[7.0.15, 7.0.15]"
-          },
-          {
-            "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[7.0.15, 7.0.15]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -11522,7 +11505,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
       }
     }
   }
