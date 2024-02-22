@@ -363,3 +363,5 @@ MigrationBackup/
 FodyWeavers.xsd
 /.vs/Hamburgueria Triagem/v17/.suo
 /Hamburgueron & Onicham/obj/Debug/net7.0/Hamburgueria.WEB.csproj.AssemblyReference.cache
+/Hamburgueria.DATA/bin/Debug/net7.0/Hamburgueria.DATA.pdb
+/Hamburgueria.DATA/bin/Debug/net7.0/Hamburgueria.DATA.dll
