@@ -12,6 +12,23 @@ C:\Projetos\Hamburgueron & Onicham\Hamburgueria.DATA\obj\Debug\net7.0\Hamburguer
 C:\Projetos\Hamburgueron & Onicham\Hamburgueria.DATA\obj\Debug\net7.0\ref\Hamburgueria.DATA.dll
 C:\Projetos\Hamburgueron & Onicham\Hamburgueria.DATA\bin\Debug\net7.0\Hamburgueria.DATA.runtimeconfig.json
 C:\Projetos\Hamburgueron & Onicham\Hamburgueria.DATA\obj\Debug\net7.0\Hamburgueria.DATA.genruntimeconfig.cache
+<<<<<<< HEAD
+D:\Desktop\projetohamburguer\Hamburgueria-Triagem\Hamburgueria.DATA\bin\Debug\net7.0\Hamburgueria.DATA.deps.json
+D:\Desktop\projetohamburguer\Hamburgueria-Triagem\Hamburgueria.DATA\bin\Debug\net7.0\Hamburgueria.DATA.runtimeconfig.json
+D:\Desktop\projetohamburguer\Hamburgueria-Triagem\Hamburgueria.DATA\bin\Debug\net7.0\Hamburgueria.DATA.dll
+D:\Desktop\projetohamburguer\Hamburgueria-Triagem\Hamburgueria.DATA\bin\Debug\net7.0\Hamburgueria.DATA.pdb
+D:\Desktop\projetohamburguer\Hamburgueria-Triagem\Hamburgueria.DATA\obj\Debug\net7.0\Hamburgueria.DATA.csproj.AssemblyReference.cache
+D:\Desktop\projetohamburguer\Hamburgueria-Triagem\Hamburgueria.DATA\obj\Debug\net7.0\Hamburgueria.DATA.GeneratedMSBuildEditorConfig.editorconfig
+D:\Desktop\projetohamburguer\Hamburgueria-Triagem\Hamburgueria.DATA\obj\Debug\net7.0\Hamburgueria.DATA.AssemblyInfoInputs.cache
+D:\Desktop\projetohamburguer\Hamburgueria-Triagem\Hamburgueria.DATA\obj\Debug\net7.0\Hamburgueria.DATA.AssemblyInfo.cs
+D:\Desktop\projetohamburguer\Hamburgueria-Triagem\Hamburgueria.DATA\obj\Debug\net7.0\Hamburgueria.DATA.csproj.CoreCompileInputs.cache
+D:\Desktop\projetohamburguer\Hamburgueria-Triagem\Hamburgueria.DATA\obj\Debug\net7.0\Hamburgueria.DATA.sourcelink.json
+D:\Desktop\projetohamburguer\Hamburgueria-Triagem\Hamburgueria.DATA\obj\Debug\net7.0\Hamburgueria.DATA.dll
+D:\Desktop\projetohamburguer\Hamburgueria-Triagem\Hamburgueria.DATA\obj\Debug\net7.0\refint\Hamburgueria.DATA.dll
+D:\Desktop\projetohamburguer\Hamburgueria-Triagem\Hamburgueria.DATA\obj\Debug\net7.0\Hamburgueria.DATA.pdb
+D:\Desktop\projetohamburguer\Hamburgueria-Triagem\Hamburgueria.DATA\obj\Debug\net7.0\Hamburgueria.DATA.genruntimeconfig.cache
+D:\Desktop\projetohamburguer\Hamburgueria-Triagem\Hamburgueria.DATA\obj\Debug\net7.0\ref\Hamburgueria.DATA.dll
+=======
 E:\C#\Projeto\Hamburgueria-Triagem\Hamburgueria.DATA\bin\Debug\net7.0\Hamburgueria.DATA.deps.json
 E:\C#\Projeto\Hamburgueria-Triagem\Hamburgueria.DATA\bin\Debug\net7.0\Hamburgueria.DATA.runtimeconfig.json
 E:\C#\Projeto\Hamburgueria-Triagem\Hamburgueria.DATA\bin\Debug\net7.0\Hamburgueria.DATA.dll
@@ -27,3 +44,4 @@ E:\C#\Projeto\Hamburgueria-Triagem\Hamburgueria.DATA\obj\Debug\net7.0\refint\Ham
 E:\C#\Projeto\Hamburgueria-Triagem\Hamburgueria.DATA\obj\Debug\net7.0\Hamburgueria.DATA.pdb
 E:\C#\Projeto\Hamburgueria-Triagem\Hamburgueria.DATA\obj\Debug\net7.0\Hamburgueria.DATA.genruntimeconfig.cache
 E:\C#\Projeto\Hamburgueria-Triagem\Hamburgueria.DATA\obj\Debug\net7.0\ref\Hamburgueria.DATA.dll
+>>>>>>> 4db0e20761e15f9d063d0f1e53d59267311da17c
