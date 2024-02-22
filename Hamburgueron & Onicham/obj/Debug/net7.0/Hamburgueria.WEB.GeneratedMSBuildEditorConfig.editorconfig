@@ -9,49 +9,43 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = HamburgueriaTriagem
 build_property.RootNamespace = HamburgueriaTriagem
-build_property.ProjectDir = C:\Projetos\Hamburgueron & Onicham\Hamburgueron & Onicham\
+build_property.ProjectDir = E:\C#\Projeto\Hamburgueria-Triagem\Hamburgueron & Onicham\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Projetos\Hamburgueron & Onicham\Hamburgueron & Onicham
+build_property.MSBuildProjectDirectory = E:\C#\Projeto\Hamburgueria-Triagem\Hamburgueron & Onicham
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Projetos/Hamburgueron & Onicham/Hamburgueron & Onicham/Views/Backup/Ingrediente/CadastrarIngrediente.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFja3VwXEluZ3JlZGllbnRlXENhZGFzdHJhckluZ3JlZGllbnRlLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Projetos/Hamburgueron & Onicham/Hamburgueron & Onicham/Views/Backup/Ingrediente/ListarIngredientes.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFja3VwXEluZ3JlZGllbnRlXExpc3RhckluZ3JlZGllbnRlcy5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Projetos/Hamburgueron & Onicham/Hamburgueron & Onicham/Views/Home/Index.cshtml]
+[E:/C\#/Projeto/Hamburgueria-Triagem/Hamburgueron & Onicham/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Projetos/Hamburgueron & Onicham/Hamburgueron & Onicham/Views/Ingrediente/EditarIngrediente.cshtml]
+[E:/C\#/Projeto/Hamburgueria-Triagem/Hamburgueron & Onicham/Views/Ingrediente/EditarIngrediente.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5ncmVkaWVudGVcRWRpdGFySW5ncmVkaWVudGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Projetos/Hamburgueron & Onicham/Hamburgueron & Onicham/Views/Ingrediente/Index.cshtml]
+[E:/C\#/Projeto/Hamburgueria-Triagem/Hamburgueron & Onicham/Views/Ingrediente/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5ncmVkaWVudGVcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Projetos/Hamburgueron & Onicham/Hamburgueron & Onicham/Views/Ingrediente/ListarIngredientes.cshtml]
+[E:/C\#/Projeto/Hamburgueria-Triagem/Hamburgueron & Onicham/Views/Ingrediente/ListarIngredientes.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW5ncmVkaWVudGVcTGlzdGFySW5ncmVkaWVudGVzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Projetos/Hamburgueron & Onicham/Hamburgueron & Onicham/Views/Shared/_ValidationScriptsPartial.cshtml]
+[E:/C\#/Projeto/Hamburgueria-Triagem/Hamburgueron & Onicham/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Projetos/Hamburgueron & Onicham/Hamburgueron & Onicham/Views/_ViewImports.cshtml]
+[E:/C\#/Projeto/Hamburgueria-Triagem/Hamburgueron & Onicham/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Projetos/Hamburgueron & Onicham/Hamburgueron & Onicham/Views/_ViewStart.cshtml]
+[E:/C\#/Projeto/Hamburgueria-Triagem/Hamburgueron & Onicham/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Projetos/Hamburgueron & Onicham/Hamburgueron & Onicham/Views/Shared/_Layout.cshtml]
+[E:/C\#/Projeto/Hamburgueria-Triagem/Hamburgueron & Onicham/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-6xw8hlukwa

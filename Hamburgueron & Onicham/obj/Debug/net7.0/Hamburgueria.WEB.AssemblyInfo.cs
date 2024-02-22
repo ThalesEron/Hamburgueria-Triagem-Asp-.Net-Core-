@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Hamburgueria.WEB")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bacc38d70635e13d42a0fd65f49d188d2479dee0")]
 [assembly: System.Reflection.AssemblyProductAttribute("Hamburgueria.WEB")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Hamburgueria.WEB")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

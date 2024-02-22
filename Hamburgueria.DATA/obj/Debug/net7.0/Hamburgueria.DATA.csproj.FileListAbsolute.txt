@@ -12,3 +12,18 @@ C:\Projetos\Hamburgueron & Onicham\Hamburgueria.DATA\obj\Debug\net7.0\Hamburguer
 C:\Projetos\Hamburgueron & Onicham\Hamburgueria.DATA\obj\Debug\net7.0\ref\Hamburgueria.DATA.dll
 C:\Projetos\Hamburgueron & Onicham\Hamburgueria.DATA\bin\Debug\net7.0\Hamburgueria.DATA.runtimeconfig.json
 C:\Projetos\Hamburgueron & Onicham\Hamburgueria.DATA\obj\Debug\net7.0\Hamburgueria.DATA.genruntimeconfig.cache
+E:\C#\Projeto\Hamburgueria-Triagem\Hamburgueria.DATA\bin\Debug\net7.0\Hamburgueria.DATA.deps.json
+E:\C#\Projeto\Hamburgueria-Triagem\Hamburgueria.DATA\bin\Debug\net7.0\Hamburgueria.DATA.runtimeconfig.json
+E:\C#\Projeto\Hamburgueria-Triagem\Hamburgueria.DATA\bin\Debug\net7.0\Hamburgueria.DATA.dll
+E:\C#\Projeto\Hamburgueria-Triagem\Hamburgueria.DATA\bin\Debug\net7.0\Hamburgueria.DATA.pdb
+E:\C#\Projeto\Hamburgueria-Triagem\Hamburgueria.DATA\obj\Debug\net7.0\Hamburgueria.DATA.csproj.AssemblyReference.cache
+E:\C#\Projeto\Hamburgueria-Triagem\Hamburgueria.DATA\obj\Debug\net7.0\Hamburgueria.DATA.GeneratedMSBuildEditorConfig.editorconfig
+E:\C#\Projeto\Hamburgueria-Triagem\Hamburgueria.DATA\obj\Debug\net7.0\Hamburgueria.DATA.AssemblyInfoInputs.cache
+E:\C#\Projeto\Hamburgueria-Triagem\Hamburgueria.DATA\obj\Debug\net7.0\Hamburgueria.DATA.AssemblyInfo.cs
+E:\C#\Projeto\Hamburgueria-Triagem\Hamburgueria.DATA\obj\Debug\net7.0\Hamburgueria.DATA.csproj.CoreCompileInputs.cache
+E:\C#\Projeto\Hamburgueria-Triagem\Hamburgueria.DATA\obj\Debug\net7.0\Hamburgueria.DATA.sourcelink.json
+E:\C#\Projeto\Hamburgueria-Triagem\Hamburgueria.DATA\obj\Debug\net7.0\Hamburgueria.DATA.dll
+E:\C#\Projeto\Hamburgueria-Triagem\Hamburgueria.DATA\obj\Debug\net7.0\refint\Hamburgueria.DATA.dll
+E:\C#\Projeto\Hamburgueria-Triagem\Hamburgueria.DATA\obj\Debug\net7.0\Hamburgueria.DATA.pdb
+E:\C#\Projeto\Hamburgueria-Triagem\Hamburgueria.DATA\obj\Debug\net7.0\Hamburgueria.DATA.genruntimeconfig.cache
+E:\C#\Projeto\Hamburgueria-Triagem\Hamburgueria.DATA\obj\Debug\net7.0\ref\Hamburgueria.DATA.dll
