@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "D:\\Desktop\\projetohamburguer\\Hamburgueria-Triagem\\Hamburgueron & Onicham\\Hamburgueria.WEB.csproj": {}
   },
   "projects": {
@@ -15,6 +16,22 @@
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\KELVI\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+    "E:\\C#\\Projeto\\Hamburgueria-Triagem\\Hamburgueron & Onicham\\Hamburgueria.WEB.csproj": {}
+  },
+  "projects": {
+    "E:\\C#\\Projeto\\Hamburgueria-Triagem\\Hamburgueria.DATA\\Hamburgueria.DATA.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\C#\\Projeto\\Hamburgueria-Triagem\\Hamburgueria.DATA\\Hamburgueria.DATA.csproj",
+        "projectName": "Hamburgueria.DATA",
+        "projectPath": "E:\\C#\\Projeto\\Hamburgueria-Triagem\\Hamburgueria.DATA\\Hamburgueria.DATA.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "E:\\C#\\Projeto\\Hamburgueria-Triagem\\Hamburgueria.DATA\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> 4db0e20761e15f9d063d0f1e53d59267311da17c
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -99,6 +116,7 @@
         }
       }
     },
+<<<<<<< HEAD
     "D:\\Desktop\\projetohamburguer\\Hamburgueria-Triagem\\Hamburgueron & Onicham\\Hamburgueria.WEB.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -110,6 +128,19 @@
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\KELVI\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+    "E:\\C#\\Projeto\\Hamburgueria-Triagem\\Hamburgueron & Onicham\\Hamburgueria.WEB.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\C#\\Projeto\\Hamburgueria-Triagem\\Hamburgueron & Onicham\\Hamburgueria.WEB.csproj",
+        "projectName": "Hamburgueria.WEB",
+        "projectPath": "E:\\C#\\Projeto\\Hamburgueria-Triagem\\Hamburgueron & Onicham\\Hamburgueria.WEB.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "E:\\C#\\Projeto\\Hamburgueria-Triagem\\Hamburgueron & Onicham\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> 4db0e20761e15f9d063d0f1e53d59267311da17c
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -123,8 +154,13 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
+<<<<<<< HEAD
               "D:\\Desktop\\projetohamburguer\\Hamburgueria-Triagem\\Hamburgueria.DATA\\Hamburgueria.DATA.csproj": {
                 "projectPath": "D:\\Desktop\\projetohamburguer\\Hamburgueria-Triagem\\Hamburgueria.DATA\\Hamburgueria.DATA.csproj"
+=======
+              "E:\\C#\\Projeto\\Hamburgueria-Triagem\\Hamburgueria.DATA\\Hamburgueria.DATA.csproj": {
+                "projectPath": "E:\\C#\\Projeto\\Hamburgueria-Triagem\\Hamburgueria.DATA\\Hamburgueria.DATA.csproj"
+>>>>>>> 4db0e20761e15f9d063d0f1e53d59267311da17c
               }
             }
           }
