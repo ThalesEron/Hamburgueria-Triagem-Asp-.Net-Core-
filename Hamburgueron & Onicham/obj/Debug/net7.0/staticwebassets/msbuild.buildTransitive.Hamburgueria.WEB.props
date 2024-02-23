@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\buildMultiTargeting\Hamburgueria.WEB.props" />
-</Project>
