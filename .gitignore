@@ -396,3 +396,5 @@ FodyWeavers.xsd
 # Local History for Visual Studio
 .localhistory/
 /.editorconfig
+.suo
+/.vs/Hamburgueria Triagem/v17/.suo
