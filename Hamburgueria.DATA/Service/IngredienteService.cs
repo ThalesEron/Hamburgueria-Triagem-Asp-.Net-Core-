@@ -5,7 +5,7 @@ using Hamburgueria.DATA.Models;
 
 namespace Hamburgueria.DATA.Service
 {
-    public class IngredienteService : IIngredienteService
+    public class IngredienteService 
     {
 
         private readonly IIngredienteRepository _ingredienteRepository;
