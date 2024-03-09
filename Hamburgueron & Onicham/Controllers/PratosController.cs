@@ -31,14 +31,14 @@ namespace HamburgueriaTriagem.Controllers
         public IActionResult ListarPratos()
         {
 
-            var buscarIngredientes = _pratosService.ListarIngredientes();
+            var buscarPratos = _pratosService.ListarPratos();
 
-            var listaIngredientesDto = _mapper.Map<List<IngredienteDTO>>(buscarIngredientes);
+            var listarPratosDto = _mapper.Map<List<PratosDTO>>(buscarPratos);
 
-            ListarIngredientesViewModel vm = new()
+            ListarPratosViewModel vm = new()
             {
-                IngredientesL = listaIngredientesDto,
-                Ingrediente = new IngredienteDTO()
+                PratosL = listarPratosDto,
+                Prato = new PratosDTO()
             };
 
             return View(vm);
@@ -64,6 +64,17 @@ namespace HamburgueriaTriagem.Controllers
                 return RedirectToAction("ListarPratos");
 
 
+
+            return RedirectToAction("ListarPratos");
+        }
+
+        public IActionResult DeletarPrato(int pratoId)
+        {
+            var prato = _pratosService.GetPratoById(pratoId);
+
+            prato.Ativo = false;
+
+            _pratosService.DeletarPrato(prato);
 
             return RedirectToAction("ListarPratos");
         }

@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Hamburgueria.DATA.Models.Pratos>
+﻿@model Hamburgueria.DATA.ViewModel.ListarPratosViewModel
 
 @{
     ViewData["Title"] = "Index";
@@ -13,18 +13,18 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.ValorPrato)
+                @Html.DisplayNameFor(model => model.Prato.ValorPrato)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.ValorPratoPromocional)
+                @Html.DisplayNameFor(model => model.Prato.ValorPratoPromocional)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.NomePrato)
+                @Html.DisplayNameFor(model => model.Prato.NomePrato)
             </th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
+@foreach (var item in Model.PratosL) {
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.ValorPrato)
@@ -37,7 +37,6 @@
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.Codigo">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Codigo">Details</a> |
                 <a asp-action="Delete" asp-route-id="@item.Codigo">Delete</a>
             </td>
         </tr>
