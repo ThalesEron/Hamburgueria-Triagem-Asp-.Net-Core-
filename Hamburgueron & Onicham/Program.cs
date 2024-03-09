@@ -19,6 +19,7 @@ builder.Services.AddAutoMapper(typeof(DomainToDTOMapping));
 
 //INJECAO DE DEPENDENCIA REPOSITORY
 builder.Services.AddTransient<IIngredienteRepository, IngredienteRepository>();
+builder.Services.AddTransient<IPratosRepository, PratosRepository>();
 
 //INJECAO DE DEPENDENCIA SERVICE
 builder.Services.AddTransient<IIngredienteService, IngredienteService>();

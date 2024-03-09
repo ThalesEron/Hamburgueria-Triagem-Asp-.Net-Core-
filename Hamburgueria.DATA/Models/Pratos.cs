@@ -18,11 +18,11 @@ public class Pratos
 
     [Column("num_valor")]
     [Required]
-    public int ValorPrato { get; set; }
+    public decimal ValorPrato { get; set; }
 
     [Column("num_valor_promocional")]
     [Required]
-    public int ValorPratoPromocional { get; set; }
+    public decimal ValorPratoPromocional { get; set; }
 
     [Column("nome_prato")]
     [Required]
