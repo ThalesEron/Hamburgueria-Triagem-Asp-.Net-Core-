@@ -16,6 +16,9 @@ namespace Hamburgueria.DATA.Infrastructure.Mapping
                .ForMember(a => a.Codigo,
                    map => map.MapFrom(src => src.Id));
 
+            CreateMap<Pratos, PratosDTO>();
+
+            CreateMap<PratosDTO, Pratos>();
 
         } 
     }

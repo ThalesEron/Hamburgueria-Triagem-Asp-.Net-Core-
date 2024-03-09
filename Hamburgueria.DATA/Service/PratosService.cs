@@ -28,5 +28,19 @@ namespace Hamburgueria.DATA.Service
             _pratosRepository.CadastrarPrato(prato);
         }
 
+        public IList<Pratos> ListarPratos()
+        {
+            return _pratosRepository.ListarPratos();
+        }
+
+        public Pratos GetPratoById(int pratoId)
+        {
+            return _pratosRepository.GetPratoById(pratoId);
+        }
+
+        public void DeletarPrato(Pratos prato)
+        {
+            _pratosRepository.DeletarIngrediente(prato);
+        }
     }
 }
