@@ -12,5 +12,7 @@ namespace Hamburgueria.DATA.Interfaces
         Pratos GetPratoById(int pratoId);
 
         void DeletarPrato(Pratos prato);
+
+        void EditarPrato(Pratos prato);
     }
 }

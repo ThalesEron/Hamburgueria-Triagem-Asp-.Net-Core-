@@ -17,5 +17,9 @@ namespace Hamburgueria.DATA.DTO
         public decimal ValorPratoPromocional { get; set; }
 
         public string NomePrato { get; set; }
+
+        public DateTime DataCadastro { get; set; }
+
+        public bool Ativo { get; set; }
     }
 }

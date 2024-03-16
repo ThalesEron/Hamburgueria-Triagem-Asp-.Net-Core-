@@ -77,5 +77,34 @@ namespace HamburgueriaTriagem.Controllers
 
             return RedirectToAction("ListarPratos");
         }
+        public IActionResult EditarPrato(int pratoId)
+        {
+
+            var prato = _pratosService.GetPratoById(pratoId);
+
+            ListarPratosViewModel vm = new()
+            {
+                Prato = new PratosDTO
+                {
+                    Codigo = pratoId,
+                    DataCadastro = prato.DataCadastro,
+                    Ativo = prato.Ativo
+                }
+            };
+
+            return View(vm);
+
+        }
+        public IActionResult SaveEditarPrato(PratosDTO prato)
+        {
+
+            if (_pratosService.GetPratoByName(prato.NomePrato) is null)
+                _pratosService.EditarPrato(_mapper.Map<Pratos>(prato));
+            else
+                return RedirectToAction("ListarPratos");
+
+
+            return RedirectToAction("ListarPratos");
+        }
     }
 }
