@@ -27,6 +27,12 @@ namespace Hamburgueria.DATA.Repository
             _context.SaveChanges();
         }
 
+        public void EditarPrato(Pratos prato)
+        {
+            _context.Entry(prato).State = EntityState.Modified;
+            _context.SaveChanges();
+        }
+
         public Pratos GetPratoById(int pratoId)
         {
             return _context.Pratos.Where(a => a.Codigo == pratoId && a.Ativo == true).ToList().FirstOrDefault();

@@ -9,6 +9,7 @@ namespace Hamburgueria.DATA.Interfaces
         IList<Pratos> ListarPratos();
         Pratos GetPratoById(int pratoId);
         void DeletarPrato(Pratos prato);
+        void EditarPrato(Pratos prato);
     }
 
 

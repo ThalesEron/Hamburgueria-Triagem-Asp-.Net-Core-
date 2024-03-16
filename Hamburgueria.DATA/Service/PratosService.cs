@@ -40,7 +40,11 @@ namespace Hamburgueria.DATA.Service
 
         public void DeletarPrato(Pratos prato)
         {
-            _pratosRepository.DeletarIngrediente(prato);
+            _pratosRepository.DeletarPrato(prato);
+        }
+        public void EditarPrato(Pratos prato)
+        {
+            _pratosRepository.EditarPrato(prato);
         }
     }
 }
