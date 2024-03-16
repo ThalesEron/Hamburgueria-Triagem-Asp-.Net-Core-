@@ -1,6 +1,5 @@
 ﻿using Hamburgueria.DATA.DTO;
 using Hamburgueria.DATA.Interfaces;
-using Hamburgueria.DATA.Interfaces.IServices;
 using Hamburgueria.DATA.Models;
 
 namespace Hamburgueria.DATA.Service

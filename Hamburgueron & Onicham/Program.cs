@@ -1,10 +1,6 @@
-using Hamburgueria.DATA.Infrastructure;
 using Hamburgueria.DATA.Infrastructure.Mapping;
 using Hamburgueria.DATA.Interfaces;
-using Hamburgueria.DATA.Interfaces.IServices;
 using Hamburgueria.DATA.Repository;
-using Hamburgueria.DATA.Service;
-using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -20,6 +16,8 @@ builder.Services.AddAutoMapper(typeof(DomainToDTOMapping));
 //INJECAO DE DEPENDENCIA REPOSITORY
 builder.Services.AddTransient<IIngredienteRepository, IngredienteRepository>();
 builder.Services.AddTransient<IPratosRepository, PratosRepository>();
+
+
 
 
 var app = builder.Build();
