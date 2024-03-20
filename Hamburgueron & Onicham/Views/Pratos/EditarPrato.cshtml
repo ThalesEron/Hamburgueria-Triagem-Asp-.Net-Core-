@@ -6,15 +6,18 @@
 
 <h1>Editar Prato</h1>
 
-<h4>Prato</h4>
+<h4>Prato : @Model.Prato.NomePrato</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="EditarPrato">
+        <form asp-action="SaveEditarPrato">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="Prato.Codigo" />
-            <input type="hidden" asp-for="Prato.DataCadastro" />
-            <input type="hidden" asp-for="Prato.Ativo" />
+            <div class="form-group">
+                <label asp-for="Prato.NomePrato" class="control-label"></label>
+                <input asp-for="Prato.NomePrato" class="form-control" />
+                <span asp-validation-for="Prato.NomePrato" class="text-danger"></span>
+            </div>
             <div class="form-group">
                 <label asp-for="Prato.ValorPrato" class="control-label"></label>
                 <input asp-for="Prato.ValorPrato" class="form-control" />
@@ -25,12 +28,7 @@
                 <input asp-for="Prato.ValorPratoPromocional" class="form-control" />
                 <span asp-validation-for="Prato.ValorPratoPromocional" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Prato.NomePrato" class="control-label"></label>
-                <input asp-for="Prato.NomePrato" class="form-control" />
-                <span asp-validation-for="Prato.NomePrato" class="text-danger"></span>
-            </div>
-
+            
             <div class="form-group">
                 <input class="btn btn-primary" type="submit" value="Salvar" />
             </div>

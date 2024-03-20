@@ -1,19 +1,21 @@
 ﻿using AutoMapper;
 using Hamburgueria.DATA.DTO;
+using Hamburgueria.DATA.Interfaces.IServices;
 using Hamburgueria.DATA.Models;
 using Hamburgueria.DATA.Service;
 using Hamburgueria.DATA.ViewModel;
 using Microsoft.AspNetCore.Mvc;
+using System;
 
 namespace HamburgueriaTriagem.Controllers
 {
     public class PratosController : Controller
     {
-        private readonly PratosService _pratosService;
+        private readonly IPratosService _pratosService;
         private readonly IMapper _mapper;
 
 
-        public PratosController(PratosService pratosService, IMapper mapper)
+        public PratosController(IPratosService pratosService, IMapper mapper)
         {
             _pratosService = pratosService;
             _mapper = mapper;
@@ -44,15 +46,16 @@ namespace HamburgueriaTriagem.Controllers
         }
 
         [HttpPost]
-        public IActionResult CadastroPrato(string nomePrato, int valorPrato)
+        public IActionResult CadastroPrato(string nomePrato, string valorPrato)
         {
+
 
             Pratos prato = new()
             {
                 Ativo = true,
                 DataCadastro = DateTime.Now,
                 NomePrato = nomePrato,
-                ValorPrato = valorPrato,
+                ValorPrato = Convert.ToDecimal(valorPrato),
                 ValorPratoPromocional = 0
             };
 
@@ -88,8 +91,9 @@ namespace HamburgueriaTriagem.Controllers
                 Prato = new PratosDTO
                 {
                     Codigo = pratoId,
-                    DataCadastro = prato.DataCadastro,
-                    Ativo = prato.Ativo
+                    NomePrato = prato.NomePrato,
+                    ValorPrato = Convert.ToString(prato.ValorPrato),
+                    ValorPratoPromocional = Convert.ToString(prato.ValorPratoPromocional)
                 }
             };
 
@@ -98,12 +102,12 @@ namespace HamburgueriaTriagem.Controllers
 
         public IActionResult SaveEditarPrato(PratosDTO prato)
         {
+            var pratoEditar = _mapper.Map<Pratos>(_pratosService.GetPratoById(prato.Codigo));
+            pratoEditar.ValorPrato = Convert.ToDecimal(prato.ValorPrato);
+            pratoEditar.ValorPratoPromocional = Convert.ToDecimal(prato.ValorPratoPromocional);
+            pratoEditar.NomePrato = prato.NomePrato;
 
-            if(_pratosService.GetPratoByName(prato.NomePrato) is null)
-                _pratosService.EditarPrato(_mapper.Map<Pratos>(prato));
-            else
-                return RedirectToAction("ListarPratos");
-
+            _pratosService.EditarPrato(pratoEditar);
 
             return RedirectToAction("ListarPratos");
         }

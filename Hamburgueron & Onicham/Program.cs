@@ -22,6 +22,7 @@ builder.Services.AddTransient<IPratosRepository, PratosRepository>();
 
 //INJECAO DE DEPENDENCIA SERVICE
 builder.Services.AddTransient<IIngredienteService, IngredienteService>();
+builder.Services.AddTransient<IPratosService, PratosService>();
 
 var app = builder.Build();
 AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);

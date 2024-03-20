@@ -3,6 +3,7 @@ using Hamburgueria.DATA.Infrastructure;
 using Hamburgueria.DATA.Interfaces;
 using Hamburgueria.DATA.Models;
 using Microsoft.EntityFrameworkCore;
+using System.IO;
 
 namespace Hamburgueria.DATA.Repository
 {
@@ -25,8 +26,14 @@ namespace Hamburgueria.DATA.Repository
 
         public void EditarIngrediente(Ingrediente ingrediente)
         {
-            _context.Entry(ingrediente).State = EntityState.Modified;
-            _context.SaveChanges();
+            var buscarIngrediente = _context.Ingredientes.Find(ingrediente.Codigo);
+
+            if(buscarIngrediente != null)
+            {
+                _context.Entry(buscarIngrediente).CurrentValues.SetValues(ingrediente);
+                _context.Entry(buscarIngrediente).State = EntityState.Modified;
+                _context.SaveChanges();
+            }
         }
 
         public Ingrediente GetIngredienteById(int ingredienteId)

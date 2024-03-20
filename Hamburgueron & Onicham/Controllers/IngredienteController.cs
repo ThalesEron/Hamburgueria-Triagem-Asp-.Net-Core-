@@ -2,8 +2,10 @@
 using Hamburgueria.DATA.DTO;
 using Hamburgueria.DATA.Interfaces.IServices;
 using Hamburgueria.DATA.Models;
+using Hamburgueria.DATA.Service;
 using Hamburgueria.DATA.ViewModel;
 using Microsoft.AspNetCore.Mvc;
+using System.IO;
 
 namespace HamburgueriaTriagem.Controllers
 {
@@ -76,8 +78,7 @@ namespace HamburgueriaTriagem.Controllers
                 Ingrediente = new IngredienteDTO
                 {
                     Id = ingredienteId,
-                    DataCadastro = ingrediente.DataCadastro,
-                    Ativo = ingrediente.Ativo
+                    NomeIngrediente = ingrediente.NomeIngrediente
                 }
             };
 
@@ -87,10 +88,9 @@ namespace HamburgueriaTriagem.Controllers
         public IActionResult SaveEditarIngrediente(IngredienteDTO ingrediente)
         {
 
-            if(_ingredienteService.GetIngredienteByName(ingrediente.NomeIngrediente) is null)
-                _ingredienteService.EditarIngrediente(_mapper.Map<Ingrediente>(ingrediente));
-            else
-                return RedirectToAction("ListarIngredientes");
+            var ingredienteEditar = _mapper.Map<Ingrediente>(_ingredienteService.GetIngredienteById(ingrediente.Id));
+            ingredienteEditar.NomeIngrediente = ingrediente.NomeIngrediente;
+            _ingredienteService.EditarIngrediente(ingredienteEditar);
 
 
             return RedirectToAction("ListarIngredientes");
