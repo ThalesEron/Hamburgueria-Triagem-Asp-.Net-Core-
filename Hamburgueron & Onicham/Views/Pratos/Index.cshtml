@@ -1,10 +1,10 @@
-﻿@model Hamburgueria.DATA.Models.Pratos
+﻿@model Hamburgueria.DATA.DTO.PratosDTO
 
 @{
-    ViewData["Title"] = "CadastroPrato";
+    ViewData["Title"] = "Cadastro Prato";
 }
 
-<h1>CadastroPrato</h1>
+<h1>Cadastro Prato</h1>
 
 <h4>Pratos</h4>
 <hr />
@@ -32,7 +32,7 @@
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a class="btn btn-primary" asp-action="ListarPratos">Voltar para a lista.</a>
 </div>
 
 @section Scripts {

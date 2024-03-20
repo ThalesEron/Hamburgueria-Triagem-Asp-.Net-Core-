@@ -1,15 +1,15 @@
 ﻿@model Hamburgueria.DATA.ViewModel.ListarPratosViewModel
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Pratos Cadastrados";
 }
 
-<h1>Index</h1>
+<h1>Pratos Cadastrados</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a class="btn btn-primary" asp-action="Index">Novo Prato</a>
 </p>
-<table class="table">
+<table id="tabelaPratos" class="table">
     <thead>
         <tr>
             <th>
@@ -21,6 +21,7 @@
             <th>
                 @Html.DisplayNameFor(model => model.Prato.NomePrato)
             </th>
+            <th></th>
             
          
         </tr>
@@ -39,10 +40,23 @@
             </td>
             
             <td>
-                <a asp-action="Edit" asp-route-id="@item.Codigo">Edit</a> ||
-                <a asp-action="Delete" asp-route-id="@item.Codigo">Delete</a>
+                    <a asp-action="EditarPrato" asp-route-pratoId="@item.Codigo">Editar</a> |
+                    <a asp-action="DeletarPrato" asp-route-pratoId="@item.Codigo">Deletar</a>
             </td>
         </tr>
 }
     </tbody>
 </table>
+
+@section Scripts {
+
+    <script>
+        new DataTable('#tabelaPratos', {
+            language: {
+                url: '//cdn.datatables.net/plug-ins/1.13.7/i18n/pt-BR.json',
+            },
+        });
+
+    </script>
+
+}
