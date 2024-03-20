@@ -1,4 +1,5 @@
 ﻿using Hamburgueria.DATA.Interfaces;
+using Hamburgueria.DATA.Interfaces.IServices;
 using Hamburgueria.DATA.Models;
 using Hamburgueria.DATA.Repository;
 using System;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Hamburgueria.DATA.Service
 {
-    public class PratosService
+    public class PratosService : IPratosService
     {
         private readonly IPratosRepository _pratosRepository;
 

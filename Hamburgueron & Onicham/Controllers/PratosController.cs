@@ -10,11 +10,11 @@ namespace HamburgueriaTriagem.Controllers
 {
     public class PratosController : Controller
     {
-        private readonly PratosService _pratosService;
+        private readonly IPratosService _pratosService;
         private readonly IMapper _mapper;
 
 
-        public PratosController(PratosService pratosService, IMapper mapper)
+        public PratosController(IPratosService pratosService, IMapper mapper)
         {
             _pratosService = pratosService;
             _mapper = mapper;
@@ -43,7 +43,7 @@ namespace HamburgueriaTriagem.Controllers
         }
 
         [HttpPost]
-        public IActionResult CadastroPrato(string nomePrato, int valorPrato)
+        public IActionResult CadastroPrato(string nomePrato, decimal valorPrato)
         {
 
             Pratos prato = new()
@@ -89,7 +89,10 @@ namespace HamburgueriaTriagem.Controllers
                 {
                     Codigo = pratoId,
                     DataCadastro = prato.DataCadastro,
-                    Ativo = prato.Ativo
+                    Ativo = prato.Ativo,
+                    ValorPrato = prato.ValorPrato,
+                    ValorPratoPromocional = prato.ValorPratoPromocional,
+
                 }
             };
 

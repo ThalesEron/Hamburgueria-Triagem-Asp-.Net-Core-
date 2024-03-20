@@ -23,7 +23,7 @@ builder.Services.AddTransient<IPratosRepository, PratosRepository>();
 
 //INJECAO DE DEPENDENCIA SERVICE
 builder.Services.AddTransient<IIngredienteService, IngredienteService>();
-
+builder.Services.AddTransient<IPratosService, PratosService>();
 
 
 
