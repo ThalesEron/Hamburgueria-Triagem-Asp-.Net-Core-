@@ -1,20 +1,18 @@
 ﻿@model Hamburgueria.DATA.ViewModel.ListarIngredientesViewModel;
 
 @{
-    ViewData["Title"] = "EditarIngrediente";
+    ViewData["Title"] = "Editar Ingrediente";
 }
 
 <h1>Editar Ingrediente</h1>
 
-<h4>Ingrediente</h4>
+<h4>Ingrediente : @Model.Ingrediente.NomeIngrediente</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
         <form asp-action="SaveEditarIngrediente">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="Ingrediente.Id" />
-            <input type="hidden" asp-for="Ingrediente.Ativo" />
-            <input type="hidden" asp-for="Ingrediente.DataCadastro" />
 
             <div class="form-group">
                 <label asp-for="Ingrediente.NomeIngrediente" class="control-label"></label>
@@ -23,7 +21,7 @@
             </div>
             <br />
             <div class="form-group">
-                <input class="btn btn-primary" type="submit" value="Save" class="btn btn-primary" />
+                <input class="btn btn-primary" type="submit" value="Salvar" />
             </div>
         </form>
     </div>

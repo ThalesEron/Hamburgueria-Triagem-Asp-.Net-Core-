@@ -7,7 +7,7 @@
 <h1>Ingredientes Cadastrados</h1>
 <br />
 <p>
-    <a class="btn btn-primary" asp-action="Index">Novo Ingrediente</a>
+    <a class="btn btn-success" asp-action="Index">Novo Ingrediente</a>
 </p>
 <table id="tabelaIngredientes" class="table">
     <thead>
@@ -31,8 +31,8 @@
                             @Html.DisplayFor(modelItem => item.DataCadastro)
                         </td>
                         <td>
-                            <a asp-action="EditarIngrediente" asp-route-ingredienteId="@item.Id">Editar</a> |
-                            <a asp-action="DeletarIngrediente" asp-route-ingredienteId="@item.Id">Deletar</a>
+                            <a class="btn btn-warning" asp-action="EditarIngrediente" asp-route-ingredienteId="@item.Id">Editar</a> |
+                            <a class="btn btn-danger" asp-action="DeletarIngrediente" asp-route-ingredienteId="@item.Id">Deletar</a>
                         </td>
                     </tr>
             }

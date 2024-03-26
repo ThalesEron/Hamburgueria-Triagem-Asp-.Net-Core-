@@ -5,9 +5,8 @@ namespace Hamburgueria.DATA.Infrastructure
 {
     public class ConnectionContext : DbContext
     {
-        //public DbSet<Login> Logins { get; set; }
-        //public DbSet<Pedido> Pedidos { get; set; }
         public DbSet<Ingrediente> Ingredientes { get; set; }
+        public DbSet<Pratos> Pratos { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

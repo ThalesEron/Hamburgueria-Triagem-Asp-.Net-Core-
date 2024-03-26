@@ -1,0 +1,59 @@
+﻿@model Hamburgueria.DATA.ViewModel.ListarPratosViewModel
+
+@{
+    ViewData["Title"] = "Pratos Cadastrados";
+}
+
+<h1>Pratos Cadastrados</h1>
+
+<p>
+    <a class="btn btn-success" asp-action="Index">Novo Prato</a>
+</p>
+<table id="tabelaPratos" class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Prato.ValorPrato)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Prato.ValorPratoPromocional)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Prato.NomePrato)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.PratosL) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ValorPrato)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ValorPratoPromocional)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NomePrato)
+            </td>
+            <td>
+                    <a class="btn btn-warning" asp-action="EditarPrato" asp-route-pratoId="@item.Codigo">Editar</a> |
+                    <a class="btn btn-danger" asp-action="DeletarPrato" asp-route-pratoId="@item.Codigo">Deletar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+
+@section Scripts{
+
+    <script>
+        new DataTable('#tabelaPratos', {
+            language: {
+                url: '//cdn.datatables.net/plug-ins/1.13.7/i18n/pt-BR.json',
+            },
+        });
+
+    </script>
+
+}
