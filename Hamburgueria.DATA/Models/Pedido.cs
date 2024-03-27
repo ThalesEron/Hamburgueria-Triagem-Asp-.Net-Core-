@@ -1,14 +1,33 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Hamburgueria.DATA.Models;
-public class Pedido : BaseModel
+[Table("tb_pedido")]
+
+public class Pedido
 {
-    public string NomeCliente { get; set; }
-    public int Valor { get; set; }
+    [Key]
+    [Column("id")]
+    [Required]
+    public int Codigo { get; set; }
+
+    [Column("num_valor")]
+    [Required]
+    public decimal ValorPrato { get; set; }
+
+    [Column("num_mesa")]
+    [Required]
     public int NumeroMesa { get; set; }
 
+    [Column("nome_cliente")]
+    [Required]
+    public string NomeCliente { get; set; }
+
+    [Column("ind_ativo")]
+    [Required]
+    public bool Ativo { get; set; }
+
+    [Column("dat_cadastro")]
+    [Required]
+    public DateTime DataCadastro { get; set; }
 }
