@@ -7,6 +7,8 @@ namespace Hamburgueria.DATA.Infrastructure
     {
         public DbSet<Ingrediente> Ingredientes { get; set; }
         public DbSet<Pratos> Pratos { get; set; }
+        public DbSet<Pedido> Pedido { get; set; }
+
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
