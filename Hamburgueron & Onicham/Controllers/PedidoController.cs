@@ -1,5 +1,7 @@
 ﻿using AutoMapper;
 using Hamburgueria.DATA.Interfaces.IServices;
+using Hamburgueria.DATA.Models;
+using Hamburgueria.DATA.Service;
 using Microsoft.AspNetCore.Mvc;
 
 namespace HamburgueriaTriagem.Controllers
@@ -22,6 +24,25 @@ namespace HamburgueriaTriagem.Controllers
 
             return View();
         }
+        [HttpPost]
+        public IActionResult CadastrarPedido(int numeroMesa, string nomeCliente)
+        {
+
+            Pedido pedido = new()
+            {
+                Ativo = true,
+                DataCadastro = DateTime.Now,
+                NumeroMesa = numeroMesa,
+                NomeCliente = nomeCliente,
+               
+            };
+          
+                _pedidoService.CadastrarPedido(pedido);
+         
+
+            return RedirectToAction("ListarPedidos");
+        }
+
     }
 }
 

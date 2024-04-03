@@ -13,7 +13,7 @@ public class Pedido
 
     [Column("num_valor")]
     [Required]
-    public decimal ValorPrato { get; set; }
+    public decimal ValorPedido { get; set; }
 
     [Column("num_mesa")]
     [Required]

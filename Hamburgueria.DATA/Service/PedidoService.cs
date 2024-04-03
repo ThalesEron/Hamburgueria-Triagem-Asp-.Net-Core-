@@ -1,5 +1,7 @@
 ﻿using Hamburgueria.DATA.Interfaces;
 using Hamburgueria.DATA.Interfaces.IServices;
+using Hamburgueria.DATA.Models;
+using Hamburgueria.DATA.Repository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,6 +17,12 @@ namespace Hamburgueria.DATA.Service
         public PedidoService(IPedidoRepository pedidoRepository)
         {
             _pedidoRepository = pedidoRepository;
+        }
+
+        public void CadastrarPedido(Pedido pedido)
+        {
+            _pedidoRepository.CadastrarPedido(pedido);
+
         }
     }
 }

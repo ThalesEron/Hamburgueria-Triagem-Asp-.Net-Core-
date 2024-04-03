@@ -27,8 +27,7 @@ namespace HamburgueriaTriagem.Controllers
 
             return View();
         }
-
-        [HttpPost]      
+        [HttpPost]
         public IActionResult CadastroIngrediente(string nomeIngrediente)
         {
 
@@ -37,11 +36,11 @@ namespace HamburgueriaTriagem.Controllers
                 Ativo = true,
                 DataCadastro = DateTime.Now,
                 NomeIngrediente = nomeIngrediente
-               
+
             };
 
 
-            if(_ingredienteService.GetIngredienteByName(nomeIngrediente) is null)
+            if (_ingredienteService.GetIngredienteByName(nomeIngrediente) is null)
                 _ingredienteService.CadastrarIngrediente(ingrediente);
             else
                 return RedirectToAction("ListarIngredientes");
