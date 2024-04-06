@@ -20,6 +20,9 @@ namespace Hamburgueria.DATA.Infrastructure.Mapping
 
             CreateMap<PratosDTO, Pratos>();
 
+            CreateMap<Pedido, PedidoDTO>();
+
+            CreateMap<PedidoDTO, Pedido>();
 
         } 
     }

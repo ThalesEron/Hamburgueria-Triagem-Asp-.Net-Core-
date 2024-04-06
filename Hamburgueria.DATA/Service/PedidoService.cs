@@ -24,5 +24,9 @@ namespace Hamburgueria.DATA.Service
             _pedidoRepository.CadastrarPedido(pedido);
 
         }
+        public IList<Pedido> ListarPedido()
+        {
+            return _pedidoRepository.ListarPedido();
+        }
     }
 }

@@ -1,0 +1,59 @@
+﻿@model Hamburgueria.DATA.ViewModel.ListarPedidoViewModel
+
+@{
+    ViewData["Title"] = "ListarPedido";
+}
+
+<h1>Pedidos Cdastrados</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table id="tabelaPedido"> class="table"
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Pedido.ValorPedido)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pedido.NumeroMesa)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pedido.NomeCliente)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pedido.Ativo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pedido.DataCadastro)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.PedidosL) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ValorPedido)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumeroMesa)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NomeCliente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ativo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataCadastro)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Codigo">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Codigo">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Codigo">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

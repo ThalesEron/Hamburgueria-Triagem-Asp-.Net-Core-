@@ -1,7 +1,9 @@
 ﻿using AutoMapper;
+using Hamburgueria.DATA.DTO;
 using Hamburgueria.DATA.Interfaces.IServices;
 using Hamburgueria.DATA.Models;
 using Hamburgueria.DATA.Service;
+using Hamburgueria.DATA.ViewModel;
 using Microsoft.AspNetCore.Mvc;
 
 namespace HamburgueriaTriagem.Controllers
@@ -42,7 +44,22 @@ namespace HamburgueriaTriagem.Controllers
 
             return RedirectToAction("ListarPedidos");
         }
+        [HttpGet]
+        public IActionResult ListarPedido()
+        {
 
+            var buscarPedido = _pedidoService.ListarPedido();
+
+            var listaPedidoDto = _mapper.Map<List<PedidoDTO>>(buscarPedido);
+
+            ListarPedidoViewModel vm = new()
+            {
+                PedidosL = listaPedidoDto,
+                Pedido = new PedidoDTO()
+            };
+
+            return View(vm);
+        }
     }
 }
 
