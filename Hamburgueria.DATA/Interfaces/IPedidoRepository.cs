@@ -10,5 +10,6 @@ namespace Hamburgueria.DATA.Interfaces
     public interface IPedidoRepository
     {
         void CadastrarPedido(Pedido pedido);
+        IList<Pedido> ListarPedidos();
     }
 }

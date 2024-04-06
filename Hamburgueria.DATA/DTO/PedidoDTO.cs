@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Hamburgueria.DATA.DTO
 {
-    internal class PedidoDTO
+    public class PedidoDTO
     {
         public int Codigo { get; set; }
         [DisplayName("Valor Pedido")]

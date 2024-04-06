@@ -19,5 +19,10 @@ namespace Hamburgueria.DATA.Repository
             _context.Pedido.Add(pedido);
             _context.SaveChanges();
         }
+
+        public IList<Pedido> ListarPedidos()
+        {
+            return _context.Pedido.Where(a => a.Ativo == true).ToList();
+        }
     }
 }
