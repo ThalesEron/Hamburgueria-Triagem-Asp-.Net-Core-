@@ -11,5 +11,7 @@ namespace Hamburgueria.DATA.Interfaces.IServices
     {
         void CadastrarPedido(Pedido pedido);
         IList<Pedido> ListarPedido();
+        Pedido GetPedidoById(int pedidoId);
+        void DeletarPedido(Pedido pedido);
     }
 }

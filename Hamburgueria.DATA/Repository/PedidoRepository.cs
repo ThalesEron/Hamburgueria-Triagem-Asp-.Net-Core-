@@ -1,6 +1,7 @@
 ﻿using Hamburgueria.DATA.Infrastructure;
 using Hamburgueria.DATA.Interfaces.IServices;
 using Hamburgueria.DATA.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -10,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace Hamburgueria.DATA.Repository
 {
-    public class PedidoRepository: IPedidoRepository
+    public class PedidoRepository : IPedidoRepository
     {
         private readonly ConnectionContext _context = new();
 
@@ -19,9 +20,23 @@ namespace Hamburgueria.DATA.Repository
             _context.Pedido.Add(pedido);
             _context.SaveChanges();
         }
+
+        public void DeletarPedido(Pedido pedido)
+        {
+            _context.Entry(pedido).State = EntityState.Modified;
+            _context.SaveChanges();
+        }
+
+        public Pedido GetPedidoById(int pedidoId)
+        {
+            return _context.Pedido.Where(a => a.Codigo == pedidoId && a.Ativo == true).ToList().FirstOrDefault();
+        }
+
         public IList<Pedido> ListarPedido()
         {
             return _context.Pedido.Where(a => a.Ativo == true).ToList();
         }
+       
     }
 }
+

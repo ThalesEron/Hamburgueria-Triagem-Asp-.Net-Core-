@@ -19,7 +19,7 @@ public class Pedido
     [Required]
     public int NumeroMesa { get; set; }
 
-    [Column("nome_cliente")]
+    [Column("nom_cliente")]
     [Required]
     public string NomeCliente { get; set; }
 
