@@ -1,6 +1,7 @@
 ﻿using Hamburgueria.DATA.Infrastructure;
 using Hamburgueria.DATA.Interfaces;
 using Hamburgueria.DATA.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -23,6 +24,17 @@ namespace Hamburgueria.DATA.Repository
         public IList<Pedido> ListarPedidos()
         {
             return _context.Pedido.Where(a => a.Ativo == true).ToList();
+        }
+
+        public void DeletarPedido(Pedido pedido)
+        {
+            _context.Entry(pedido).State = EntityState.Modified;
+            _context.SaveChanges();
+        }
+
+        public Pedido GetPedidoById(int pedidoId)
+        {
+            return _context.Pedido.Where(a => a.Codigo == pedidoId && a.Ativo == true).ToList().FirstOrDefault();
         }
     }
 }

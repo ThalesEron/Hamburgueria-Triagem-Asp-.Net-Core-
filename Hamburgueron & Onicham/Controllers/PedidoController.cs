@@ -66,6 +66,17 @@ namespace HamburgueriaTriagem.Controllers
             return View(vm);
         }
 
+        public IActionResult DeletarPedido(int pedidoId)
+        {
+            var pedido = _pedidoService.GetPedidoById(pedidoId);
+
+            pedido.Ativo = false;
+
+            _pedidoService.DeletarPedido(pedido);
+
+            return RedirectToAction("ListarPedidos");
+        }
+
 
     }
 }

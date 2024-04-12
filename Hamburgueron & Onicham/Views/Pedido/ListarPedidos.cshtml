@@ -7,7 +7,7 @@
 <h1>Pedidos Cadastrados</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a class="btn btn-warning" asp-action="Index" asp-route-pratoId=>Novo</a>
 </p>
 <table id="tabelaPedido" class="table">
     <thead>
@@ -20,9 +20,6 @@
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Pedido.NomeCliente)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Pedido.Ativo)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Pedido.DataCadastro)
@@ -43,17 +40,26 @@
                 @Html.DisplayFor(modelItem => item.NomeCliente)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Ativo)
-            </td>
-            <td>
                 @Html.DisplayFor(modelItem => item.DataCadastro)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.Codigo">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Codigo">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Codigo">Delete</a>
+                <a class="btn btn-warning" asp-action="EditarPedido" asp-route-pedidoId="@item.Codigo">Editar</a> |
+                <a class="btn btn-danger" asp-action="DeletarPedido" asp-route-pedidoId="@item.Codigo">Deletar</a>
             </td>
         </tr>
 }
     </tbody>
 </table>
+
+@section Scripts {
+
+    <script>
+        new DataTable('#tabelaPratos', {
+            language: {
+                url: '//cdn.datatables.net/plug-ins/1.13.7/i18n/pt-BR.json',
+            },
+        });
+
+    </script>
+
+}
