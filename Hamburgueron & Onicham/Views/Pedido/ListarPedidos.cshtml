@@ -1,0 +1,64 @@
+﻿@model Hamburgueria.DATA.ViewModel.ListarPedidosViewModel
+
+@{
+    ViewData["Title"] = "Pedidos Cadastrados";
+}
+
+<h1>Pedidos Cadastrados</h1>
+
+<p>
+    <a class="btn btn-warning" asp-action="Index" asp-route-pratoId=>Novo</a>
+</p>
+<table id="tabelaPedido" class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Pedido.ValorPedido)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pedido.NumeroMesa)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pedido.NomeCliente)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pedido.DataCadastro)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.PedidosL) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ValorPedido)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NumeroMesa)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NomeCliente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataCadastro)
+            </td>
+            <td>
+                <a class="btn btn-danger" asp-action="DeletarPedido" asp-route-pedidoId="@item.Codigo">Deletar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+
+@section Scripts {
+
+    <script>
+        new DataTable('#tabelaPratos', {
+            language: {
+                url: '//cdn.datatables.net/plug-ins/1.13.7/i18n/pt-BR.json',
+            },
+        });
+
+    </script>
+
+}

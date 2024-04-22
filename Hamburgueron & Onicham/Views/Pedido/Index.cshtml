@@ -1,0 +1,40 @@
+﻿@model Hamburgueria.DATA.Models.Pedido
+
+@{
+    ViewData["Title"] = "Cadastrar Pedido";
+}
+
+<h1>Finalizar Pedido</h1>
+
+<h4>Onde será servido</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="CadastrarPedido">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="NumeroMesa" class="control-label"></label>
+                <input asp-for="NumeroMesa" class="form-control" />
+                <span asp-validation-for="NumeroMesa" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NomeCliente" class="control-label"></label>
+                <input asp-for="NomeCliente" class="form-control" />
+                <span asp-validation-for="NomeCliente" class="text-danger"></span>
+                <br />
+            <div class="form-group">
+                    <input type="submit" value="Fazer Pedido" class="btn btn-primary" />
+            </div>
+                <br />
+        </form>
+    </div>
+</div>
+
+<br />
+<div>
+    <a class="btn btn-primary" asp-action="ListarPedidos">Voltar para a lista.</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
