@@ -30,6 +30,7 @@ namespace Hamburgueria.DATA.Repository
         {
             _context.Entry(pedido).State = EntityState.Modified;
             _context.SaveChanges();
+
         }
 
         public Pedido GetPedidoById(int pedidoId)

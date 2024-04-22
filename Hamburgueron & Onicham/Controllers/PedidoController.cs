@@ -5,6 +5,7 @@ using Hamburgueria.DATA.Models;
 using Hamburgueria.DATA.Service;
 using Hamburgueria.DATA.ViewModel;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace HamburgueriaTriagem.Controllers
 {
@@ -69,8 +70,8 @@ namespace HamburgueriaTriagem.Controllers
         public IActionResult DeletarPedido(int pedidoId)
         {
             var pedido = _pedidoService.GetPedidoById(pedidoId);
-
-            pedido.Ativo = false;
+                        
+                pedido.Ativo = false;
 
             _pedidoService.DeletarPedido(pedido);
 
