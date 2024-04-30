@@ -48,5 +48,11 @@ namespace Hamburgueria.DATA.Repository
         {
             return _context.Pratos.Where(a => a.Ativo == true).ToList();
         }
+
+        public void CadastrarPratosXIngrediente(PratosXIngrediente pratosXIngrediente)
+        {
+            _context.PratosXIngrediente.Add(pratosXIngrediente);
+            _context.SaveChanges();
+        }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using Hamburgueria.DATA.Interfaces;
 using Hamburgueria.DATA.Interfaces.IServices;
 using Hamburgueria.DATA.Models;
+using System.IO;
 
 namespace Hamburgueria.DATA.Service
 {
@@ -42,6 +43,11 @@ namespace Hamburgueria.DATA.Service
         public void EditarPrato(Pratos prato)
         {
             _pratosRepository.EditarPrato(prato);
+        }
+
+        public void CadastrarPratosXIngrediente(PratosXIngrediente pratosXIngrediente)
+        {
+            _pratosRepository.CadastrarPratosXIngrediente(pratosXIngrediente);
         }
     }
 }

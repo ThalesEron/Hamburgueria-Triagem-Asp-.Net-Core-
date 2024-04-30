@@ -13,33 +13,43 @@ namespace HamburgueriaTriagem.Controllers
     {
         private readonly IPratosService _pratosService;
         private readonly IMapper _mapper;
+        private readonly IIngredienteService _ingredienteService;
 
-
-        public PratosController(IPratosService pratosService, IMapper mapper)
+        public PratosController(IPratosService pratosService, IMapper mapper, IIngredienteService ingredienteService)
         {
             _pratosService = pratosService;
             _mapper = mapper;
+            _ingredienteService = ingredienteService;
         }
 
 
         public IActionResult Index()
         {
+            var buscarIngredientes = _ingredienteService.ListarIngredientes();
+            var listarIngredienteDto = _mapper.Map<List<IngredienteDTO>>(buscarIngredientes);
 
-            return View();
+            ListarPratosViewModel vm = new()
+            {
+                IngredienteL = listarIngredienteDto,
+
+            };
+
+            return View(vm);
         }
 
         [HttpGet]
         public IActionResult ListarPratos()
         {
-
             var buscarPratos = _pratosService.ListarPratos();
-
+                 
             var listarPratosDto = _mapper.Map<List<PratosDTO>>(buscarPratos);
-
+                        
             ListarPratosViewModel vm = new()
             {
                 PratosL = listarPratosDto,
-                Prato = new PratosDTO()
+                Prato = new PratosDTO(),
+                
+
             };
 
             return View(vm);
@@ -111,5 +121,7 @@ namespace HamburgueriaTriagem.Controllers
 
             return RedirectToAction("ListarPratos");
         }
+
+
     }
 }
