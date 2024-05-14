@@ -1,4 +1,4 @@
-﻿@model Hamburgueria.DATA.DTO.PratosDTO
+﻿@model Hamburgueria.DATA.ViewModel.ListarPratosViewModel
 
 @{
     ViewData["Title"] = "Cadastrar Prato";
@@ -13,14 +13,14 @@
         <form asp-action="CadastroPrato">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="ValorPrato" class="control-label"></label>
-                <input asp-for="ValorPrato" class="form-control" />
-                <span asp-validation-for="ValorPrato" class="text-danger"></span>
+                <label asp-for="Prato.ValorPrato" class="control-label"></label>
+                <input asp-for="Prato.ValorPrato" class="form-control" />
+                <span asp-validation-for="Prato.ValorPrato" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="NomePrato" class="control-label"></label>
-                <input asp-for="NomePrato" class="form-control" />
-                <span asp-validation-for="NomePrato" class="text-danger"></span>
+                <label asp-for="Prato.NomePrato" class="control-label"></label>
+                <input asp-for="Prato.NomePrato" class="form-control" />
+                <span asp-validation-for="Prato.NomePrato" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />

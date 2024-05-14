@@ -30,7 +30,7 @@ namespace HamburgueriaTriagem.Controllers
 
             ListarPratosViewModel vm = new()
             {
-                IngredienteL = listarIngredienteDto,
+                //IngredienteL = listarIngredienteDto,
 
             };
 

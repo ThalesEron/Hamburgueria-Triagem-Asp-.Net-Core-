@@ -10,7 +10,7 @@ namespace Hamburgueria.DATA.DTO
         [DisplayName("Valor Promocional")]
         public string ValorPratoPromocional { get; set; }
         [DisplayName("Nome Prato")]
-        public string NomePrato { get; set; }
+		public string NomePrato { get; set; }
         [DisplayName("Data Cadastro")]
         public DateTime DataCadastro { get; set; }
         public bool Ativo { get; set; }
