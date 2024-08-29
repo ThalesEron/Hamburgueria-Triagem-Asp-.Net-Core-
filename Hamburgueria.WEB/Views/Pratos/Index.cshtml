@@ -1,0 +1,96 @@
+﻿@model Hamburgueria.DATA.ViewModel.ListarPratosViewModel
+
+@{
+    ViewData["Title"] = "Cadastrar Prato";
+}
+
+<h1>Cadastrar Prato</h1>
+
+<h4>Pratos</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="CadastroPrato">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Prato.ValorPrato" class="control-label"></label>
+                <input asp-for="Prato.ValorPrato" class="form-control" />
+                <span asp-validation-for="Prato.ValorPrato" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Prato.NomePrato" class="control-label"></label>
+                <input asp-for="Prato.NomePrato" class="form-control" />
+                <span asp-validation-for="Prato.NomePrato" class="text-danger"></span>
+            </div>
+            <div class="container mt-5">
+                <h4>Ingredientes</h4>
+                <table class="table" id="tabela-dinamica">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Ingredientes</th>
+                            <th>Quantidade</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Linhas serão adicionadas aqui dinamicamente -->
+                    </tbody>
+                </table>
+                <button type="button" class="btn btn-primary mr-2" id="adicionar-linha">Adicionar Linha</button>
+            </div>
+
+            <br />
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a class="btn btn-primary" asp-action="ListarPratos">Voltar para a lista.</a>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+        function construirOptionsIngredientes() {
+            var options = '';
+            @foreach(var ingrediente in Model.IngredienteL)
+            {
+                <text>
+                        options += '<option value="@ingrediente.Id">@ingrediente.NomeIngrediente</option>';
+                </text>
+            }
+            return options;
+        }
+
+        $(document).ready(function () {
+            var counter = 0;
+
+            $("#adicionar-linha").click(function () {
+                var newRow = $("<tr>");
+                var cols = "";
+
+                cols += '<td>' + (counter + 1) + '</td>';
+                cols += '<td><select class="form-control" name="Ingredientes[' + counter + '].Id">' + construirOptionsIngredientes() + '</select></td>';
+                cols += '<td><input type="text" class="form-control" name="Ingredientes[' + counter + '].Quantidade"></td>';
+                cols += '<td><button type="button" class="btn btn-danger btn-remover">Remover</button></td>';
+
+                newRow.append(cols);
+                $("#tabela-dinamica tbody").append(newRow);
+                counter++;
+            });
+
+            $(document).on('click', '.btn-remover', function () {
+                $(this).closest("tr").remove();
+                counter--;
+            });
+        });
+    </script>
+}

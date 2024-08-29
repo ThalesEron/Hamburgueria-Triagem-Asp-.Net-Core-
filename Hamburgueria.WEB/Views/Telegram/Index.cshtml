@@ -1,0 +1,30 @@
+﻿@model Hamburgueria.DATA.ViewModel.AcaiViewModel
+@{
+    ViewData["Title"] = "Faça seu pedido";
+}
+
+<h1>Monte seu Açaí</h1>
+
+<form asp-action="AdicionarPedido" method="post">
+    <div class="form-group">
+        <label for="size">Tamanho</label>
+        <select class="form-control" id="size" name="sizeId" required>
+            <option value="">Selecione um tamanho</option>
+            @foreach(var tamanho in Model.TamanhosL)
+            {
+                <option value="@tamanho.Nome">@tamanho.Nome - @tamanho.Preco.ToString("C")</option>
+            }
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="additionals">Adicionais</label>
+        <select class="form-control" id="additionals" name="additionalIds">
+            @foreach(var adicional in Model.AdicionaisL)
+            {
+                <option value="@adicional.Nome">@adicional.Nome - @adicional.Quantidade.ToString()</option>
+
+            }
+        </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Fazer Pedido</button>
+</form>

@@ -12,20 +12,30 @@ namespace HamburgueriaTriagem.Controllers
     public class PratosController : Controller
     {
         private readonly IPratosService _pratosService;
+        private readonly IIngredienteService _ingredienteService;
         private readonly IMapper _mapper;
 
 
-        public PratosController(IPratosService pratosService, IMapper mapper)
+        public PratosController(IPratosService pratosService, IMapper mapper, IIngredienteService ingredienteService)
         {
             _pratosService = pratosService;
             _mapper = mapper;
+            _ingredienteService = ingredienteService;
         }
 
 
         public IActionResult Index()
         {
+            var buscarIngredientes = _ingredienteService.ListarIngredientes();
+            var listarIngredienteDto = _mapper.Map<List<IngredienteDTO>>(buscarIngredientes);
 
-            return View();
+            ListarPratosViewModel vm = new()
+            {
+                IngredienteL = listarIngredienteDto
+
+            };
+
+            return View(vm);
         }
 
         [HttpGet]
@@ -45,22 +55,33 @@ namespace HamburgueriaTriagem.Controllers
             return View(vm);
         }
 
-        [HttpPost]
-        public IActionResult CadastroPrato(string nomePrato, string valorPrato)
+        [HttpGet]
+        public IActionResult AdicionarIngrediente()
         {
 
+            var buscarPratos = _pratosService.ListarPratos();
 
-            Pratos prato = new()
+            var listarPratosDto = _mapper.Map<List<PratosDTO>>(buscarPratos);
+
+            ListarPratosViewModel vm = new()
             {
-                Ativo = true,
-                DataCadastro = DateTime.Now,
-                NomePrato = nomePrato,
-                ValorPrato = Convert.ToDecimal(valorPrato),
-                ValorPratoPromocional = 0
+                PratosL = listarPratosDto,
+                Prato = new PratosDTO()
             };
 
+            return View(vm);
+        }
 
-            if(_pratosService.GetPratoByName(nomePrato) is null)
+        [HttpPost]
+        public IActionResult CadastroPrato(Pratos prato, IList<IngredienteDTO> Ingredientes)
+        {
+
+            prato.Ativo = true;
+            prato.DataCadastro = DateTime.Now;
+            prato.ValorPratoPromocional = 0;
+
+
+            if(_pratosService.GetPratoByName(prato.NomePrato) is null)
                 _pratosService.CadastrarPrato(prato);
             else
                 return RedirectToAction("ListarPratos");

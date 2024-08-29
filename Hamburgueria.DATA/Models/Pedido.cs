@@ -35,6 +35,7 @@ namespace Hamburgueria.DATA.Models
         [Column("dat_cadastro")]
         [Required]
         public DateTime DataCadastro { get; set; }
+
     }
 }
 

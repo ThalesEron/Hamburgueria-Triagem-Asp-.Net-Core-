@@ -33,12 +33,14 @@ namespace Hamburgueria.DATA.Service
         public void DeletarPedido(Pedido pedido)
         {
             _pedidoRepository.DeletarPedido(pedido);
+
         }
 
         public Pedido GetPedidoById(int pedidoId)
         {
             return _pedidoRepository.GetPedidoById(pedidoId);
         }
+
 
     }
 }

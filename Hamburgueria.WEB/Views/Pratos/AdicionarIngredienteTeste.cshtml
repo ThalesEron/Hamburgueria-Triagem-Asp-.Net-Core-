@@ -1,0 +1,132 @@
+﻿@model Hamburgueria.DATA.ViewModel.ListarPratosViewModel
+
+@{
+    ViewData["Title"] = "Cadastrar Prato";
+}
+
+<h1>Cadastrar Prato</h1>
+
+<h4>Pratos</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="CadastroPrato">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Prato.ValorPrato" class="control-label"></label>
+                <input asp-for="Prato.ValorPrato" class="form-control" />
+                <span asp-validation-for="Prato.ValorPrato" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Prato.NomePrato" class="control-label"></label>
+                <input asp-for="Prato.NomePrato" class="form-control" />
+                <span asp-validation-for="Prato.NomePrato" class="text-danger"></span>
+            </div>
+            <div class="container mt-5">
+                <h4>Ingredientes</h4>
+                <table class="table" id="tabela-dinamica">
+                    <tr>
+                        <th>#</th>
+                        <th>Ingredientes</th>
+                        <th>Quantidade</th>
+                        <th>Ações</th> <!-- Coluna de ações para remover linha -->
+                    </tr>
+                    <tbody>
+                        <!-- Linhas serão adicionadas aqui dinamicamente -->
+                    </tbody>
+                </table>
+                <button class="btn btn-primary mr-2" id="adicionar-linha">Adicionar Linha</button>
+            </div>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+            <script>
+                function construirOptionsIngredientes() {
+                    var options = '';
+                    @foreach(var ingrediente in Model.PratosL)
+                    {
+                        <text>
+                                options += '<option value="@ingrediente.Codigo">@ingrediente.NomePrato</option>';
+                        </text>
+                    }
+                return options;
+                }
+
+                $(document).ready(function () {
+                    var counter = 1;
+
+                    // Adiciona linha
+                    $("#adicionar-linha").click(function () {
+                        var newRow = $("<tr>");
+                        var cols = "";
+
+                        cols += '<td>' + counter + '</td>';
+                        cols += '<td><select class="form-control" name="ingredientes">' + construirOptionsIngredientes() + '</select></td>';
+                        cols += '<td><input type="text" class="form-control" name="coluna2"></td>'; // Adiciona campo de texto editável na coluna 2
+
+                        cols += '<td>';
+                        cols += ' '; // Adiciona um espaço em branco entre os botões
+                        cols += '<button class="btn btn-danger btn-remover">Remover</button>'; // Botão para remover linha
+                        cols += '</td>';
+
+                        cols += '</tr>';
+
+                        newRow.append(cols);
+                        $("#tabela-dinamica").append(newRow);
+                        counter++;
+                    });
+
+                    // Remove linha
+                    $("#remover-linha").click(function () {
+                        $("#tabela-dinamica").find('input[name="linha"]').each(function () {
+                            if ($(this).is(":checked")) {
+                                $(this).closest("tr").remove();
+                            }
+                        });
+                    });
+
+                    // Para remover uma linha específica
+                    $(document).on('click', '.btn-remover', function () {
+                        $(this).closest("tr").remove();
+                        counter -= 1;
+                    });
+
+                    // Chama a action ao clicar no botão de ação
+                    $(document).on('click', '.btn btn-primary', function () {
+                        var ingredienteSelecionado = $(this).closest('tr').find('select[name="ingredientes"]').val();
+                        var quantidade = $(this).closest('tr').find('input[name="coluna2"]').val();
+
+                        // Envia os dados para a action via AJAX
+                        $.ajax({
+                            url: '/ControllerName/ActionName', // Substitua ControllerName e ActionName pelos nomes reais do seu controller e action
+                            type: 'POST',
+                            data: {
+                                ingrediente: ingredienteSelecionado,
+                                quantidade: quantidade
+                            },
+                            success: function (response) {
+                                // Lógica de sucesso, se necessário
+                            },
+                            error: function (xhr, status, error) {
+                                // Lógica de erro, se necessário
+                            }
+                        });
+                    });
+                });
+            </script>
+
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a class="btn btn-primary" asp-action="ListarPratos">Voltar para a lista.</a>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

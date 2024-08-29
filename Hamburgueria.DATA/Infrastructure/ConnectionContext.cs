@@ -13,7 +13,7 @@ namespace Hamburgueria.DATA.Infrastructure
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseNpgsql(
-                "Server=localhost;Port=5432;Database=postgres;User Id=postgres;Password=123");
+                "Server=localhost;Port=5432;Database=postgres;User Id=postgres;Password=1234");
         }
     }
 }
